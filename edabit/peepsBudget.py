@@ -1,3 +1,8 @@
+def get_budgets(lst):
+	result = [ sub['budget'] for sub in lst ]
+	return sum(result)
+
+
 get_budgets = [
   { "name": "John", "age": 21, "budget": 23000 },
   { "name": "Steve",  "age": 32, "budget": 40000 },
@@ -10,7 +15,9 @@ get_budgets = [
   { "name": "Martin",  "age": 16, "budget": 1600 }] 
   # 62600
 
-print(get_budgets)
+result = [ sub['budget'] for sub in get_budgets ]
 
-#def get_budgets(lst):
+#print(sum(result))
+
+#print(get_budgets(lst))
     
