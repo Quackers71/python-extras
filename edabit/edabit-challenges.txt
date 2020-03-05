@@ -5,4 +5,7 @@ https://edabit.com/challenge/X3pz4ccSx2k7HikBL
 answer in: westernShowdown.py
 
 https://edabit.com/challenge/oMCNzA4DcgpsnXTRJ
-asnwer in: findMissingNum.py
+answer in: findMissingNum.py
+
+https://edabit.com/challenge/nunJurLEibCyn8fzn
+answer in: filterOutStr.py 

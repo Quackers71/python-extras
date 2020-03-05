@@ -1,4 +1,2 @@
 def filter_list(lst):
-    for n in lst:
-        if isinstance(n, int) and n > 0:
-            return n
+    return [l for l in lst if isinstance(l, int)]
