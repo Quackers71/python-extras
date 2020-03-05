@@ -2,4 +2,4 @@ https://edabit.com/challenge/ff2R7SymbB6PfjpPm
 https://www.geeksforgeeks.org/python-get-values-of-particular-key-in-list-of-dictionaries/
 
 https://edabit.com/challenge/X3pz4ccSx2k7HikBL
-
+answer in: westernShowdown.py
