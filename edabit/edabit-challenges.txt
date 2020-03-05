@@ -3,3 +3,6 @@ https://www.geeksforgeeks.org/python-get-values-of-particular-key-in-list-of-dic
 
 https://edabit.com/challenge/X3pz4ccSx2k7HikBL
 answer in: westernShowdown.py
+
+https://edabit.com/challenge/oMCNzA4DcgpsnXTRJ
+asnwer in: findMissingNum.py
