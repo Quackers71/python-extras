@@ -27,20 +27,19 @@ class player(object):
         self.walkCount = 0
         self.jumpCount = 10
 
-
-def draw(self,win):
+    def draw(self, win):
     
-    if self.walkCount + 1 >= 27:
-        self.walkCount = 0
+        if self.walkCount + 1 >= 27:
+            self.walkCount = 0
 
-    if left:
-        win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
-        self.walkCount += 1
-    elif self.right:
-        win.blit(walkRight[self.walkCount//3], (self.x,self.y))
-        self.walkCount += 1
-    else:
-        win.blit(char, (self.x,self.y))
+        if self.left:
+            win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
+            self.walkCount += 1
+        elif self.right:
+            win.blit(walkRight[self.walkCount//3], (self.x,self.y))
+            self.walkCount += 1
+        else:
+            win.blit(char, (self.x,self.y))
 
 
 def redrawGameWindow():
