@@ -131,21 +131,21 @@ while run:
 
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_SPACE]:
+    if keys[pygame.K_SPACE]  or keys[pygame.K_DELETE]:
         if man.left:
             facing = -1
-        elif man.right:
+        else:
             facing = 1
 
-        if len(bullets) < 5:
+        if len(bullets) < 10:
             bullets.append(projectile(round(man.x + man.width //2), round(man.y + man.height//2), 6, (0,0,0), facing))
 
-    if keys[pygame.K_LEFT] and man.x > man.vel:
+    if keys[pygame.K_LEFT] or keys[pygame.K_a] and man.x > man.vel:
         man.x -= man.vel
         man.left = True
         man.right = False
         man.standing = False
-    elif keys[pygame.K_RIGHT] and man.x < man.screenWidth - man.width - man.vel:
+    elif keys[pygame.K_RIGHT] or keys[pygame.K_d] and man.x < man.screenWidth - man.width - man.vel:
         man.x += man.vel
         man.right = True
         man.left = False
@@ -155,7 +155,7 @@ while run:
         man.walkCount = 0
 
     if not(man.isJump):
-        if keys[pygame.K_UP]:
+        if keys[pygame.K_UP] or keys[pygame.K_w]:
             man.isJump = True
             man.right = False
             man.left = False
