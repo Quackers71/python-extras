@@ -134,7 +134,7 @@ while run:
     if keys[pygame.K_SPACE]:
         if man.left:
             facing = -1
-        else:
+        elif man.right:
             facing = 1
 
         if len(bullets) < 5:
