@@ -17,6 +17,7 @@ class Cat(Dog): # This inherits the Dog class - including methods and attributes
     def __init__(self, name, age, colour):
         super().__init__(name, age) # This inherits the attributes from the Dog (Parent) class i.e. self.name
         self.colour = colour # setting this attribute as it doesn't belong to the Parent class
+        #self.name = 'Jasmine'
 
     def talk(self):
         print('Meow!') # This will overload (override) the talk() method from the Parent class
