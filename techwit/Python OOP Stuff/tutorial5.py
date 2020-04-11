@@ -11,7 +11,7 @@ class Dog:
     def __str__(self):
         return str(self.name)
 
-    @classmethod # A Decorator to denote a special type of Method - which doesn't require 'self' or another parameter
+    @classmethod # A Decorator to denote a special type of Method - which doesn't require 'self' or another attribute
     def num_dogs(cls):
         return len(cls.dogs)
 
