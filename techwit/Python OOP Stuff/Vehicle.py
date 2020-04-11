@@ -1,6 +1,6 @@
 # Inheritance & Overloading
 
-class Vehicle():
+class Vehicle(): # Constructor class
     def __init__(self, name, price, gas, colour):
         self.name = name
         self.price = price
@@ -23,7 +23,7 @@ class Vehicle():
         return self.gas
 
 
-class Car(Vehicle):
+class Car(Vehicle): # Child class of the Vehicle class
     def __init__(self, name, price, gas, colour, speed):
         super().__init__(name, price, gas, colour)
         self.speed = speed
@@ -39,7 +39,7 @@ class Car(Vehicle):
         print("Beep! Beep!")
 
 
-class Truck(Car):
+class Truck(Car): # Child class of the Car class
     def __init__(self, name, price, gas, colour, speed, tyres):
         super().__init__(name, price, gas, colour, speed)
         self.tyres = tyres
