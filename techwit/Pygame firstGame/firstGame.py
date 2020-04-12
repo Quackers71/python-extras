@@ -47,7 +47,7 @@ class player(object):
             else:
                 win.blit(walkLeft[0], (self.x, self.y))
         self.hitbox = (self.x + 17, self.y + 11, 29, 52)
-        pygame.draw.rect(win, (255,0,0), self.hitbox,2)
+        #pygame.draw.rect(win, (255,0,0), self.hitbox,2)
 
 
 class projectile(object):
@@ -76,20 +76,26 @@ class enemy(object):
         self.walkCount = 0
         self.vel = 3
         self.hitbox = (self.x + 17, self.y + 2, 31, 57)
+        self.health = 10
+        self.visible = True
 
     def draw(self, win):
         self.move()
-        if self.walkCount + 1 >= 33:
-            self.walkCount = 0
+        if self.visible:
+            if self.walkCount + 1 >= 33:
+                self.walkCount = 0
 
-        if self.vel > 0:
-            win.blit(self.walkRight[self.walkCount //3], (self.x, self.y))
-            self.walkCount += 1
-        else:
-            win.blit(self.walkLeft[self.walkCount //3], (self.x, self.y))
-            self.walkCount += 1
-        self.hitbox = (self.x + 17, self.y + 2, 31, 57)
-        pygame.draw.rect(win, (255,0,0), self.hitbox,2)
+            if self.vel > 0:
+                win.blit(self.walkRight[self.walkCount //3], (self.x, self.y))
+                self.walkCount += 1
+            else:
+                win.blit(self.walkLeft[self.walkCount //3], (self.x, self.y))
+                self.walkCount += 1
+
+            pygame.draw.rect(win, (255,0,0), (self.hitbox[0], self.hitbox[1] - 20, 50, 10))
+            pygame.draw.rect(win, (0,128,0), (self.hitbox[0], self.hitbox[1] - 20, 50 - (5 * (10 - self.health)), 10))
+            self.hitbox = (self.x + 17, self.y + 2, 31, 57)
+            #pygame.draw.rect(win, (255,0,0), self.hitbox,2)
 
     def move(self):
         if self.vel > 0:
@@ -106,13 +112,18 @@ class enemy(object):
                 self.walkCount = 0
         
     def hit(self):
+        if self.health > 1:
+            self.health -= 1
+        else:
+            self.visible = False
+        
         print('hit')
 
 
 def redrawGameWindow():
     win.blit(bg, (0,0))
     text = font.render('Score: ' + str(score), 1, (0,0,0))
-    win.blit(text, (350, 10))
+    win.blit(text, (380, 10))
     man.draw(win)
     goblin.draw(win)
 
