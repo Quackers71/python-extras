@@ -16,4 +16,4 @@ class car(object):
 
 
 whip = car('Volkswagon', 'Scirocco', 2020)
-whip.display(False)
+whip.display()
