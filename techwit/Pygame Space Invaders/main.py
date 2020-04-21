@@ -41,7 +41,7 @@ class Laser:
         self.y += vel
 
     def off_screen(self, height):
-        return self.y < height and self.y >= 0
+        return not(self.y < height and self.y >= 0)
 
     def collision(self, obj):
         return collide(obj, self)
@@ -110,7 +110,7 @@ class Player(Ship):
             else:
                 for obj in objs:
                     if laser.collision(obj):
-                        objs.remove(objs)
+                        objs.remove(obj)
                         self.lasers.remove(laser)
 
 
@@ -150,7 +150,7 @@ def main():
     enemy_vel = 1
 
     player_vel = 5
-    laser_vel = 4
+    laser_vel = 5
 
     player = Player(300, 650)
 
@@ -224,7 +224,7 @@ def main():
                 lives -= 1
                 enemies.remove(enemy)
 
-        player.move_lasers(laser_vel, enemies)
+        player.move_lasers(-laser_vel, enemies)
 
 
 main()
