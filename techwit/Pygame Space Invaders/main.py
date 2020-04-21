@@ -72,7 +72,7 @@ class Ship:
                 self.lasers.remove(laser)
             elif laser.collision(obj):
                 obj.health -= 10
-                self.laser.remove(laser)
+                self.lasers.remove(laser)
 
     def cooldown(self):
         if self.cool_down_counter >= self.COOLDOWN:
@@ -113,6 +113,14 @@ class Player(Ship):
                         objs.remove(obj)
                         self.lasers.remove(laser)
 
+    def draw(self, window):
+        super().draw(window)
+        self.healthbar(window)
+
+    def healthbar(self, window):
+        pygame.draw.rect(window, (255,0,0), (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width(), 10))
+        pygame.draw.rect(window, (0,255,0), (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width() * (self.health/self.max_health), 10))
+
 
 class Enemy(Ship):
     COLOUR_MAP = {
@@ -129,6 +137,12 @@ class Enemy(Ship):
 
     def move(self, vel):
         self.y += vel
+
+    def shoot(self):
+        if self.cool_down_counter == 0:
+            laser = Laser(self.x-20, self.y, self.laser_img)
+            self.lasers.append(laser)
+            self.cool_down_counter = 1
 
 
 def collide(obj1, obj2):
@@ -152,7 +166,7 @@ def main():
     player_vel = 5
     laser_vel = 5
 
-    player = Player(300, 650)
+    player = Player(300, 630)
 
     clock = pygame.time.Clock()
 
@@ -212,7 +226,7 @@ def main():
             player.x += player_vel
         if keys[pygame.K_UP] and player.y - player_vel > 0: # up
             player.y -= player_vel
-        if keys[pygame.K_DOWN] and player.y + player_vel + player.get_height() < HEIGHT: # down
+        if keys[pygame.K_DOWN] and player.y + player_vel + player.get_height() + 15 < HEIGHT: # down
             player.y += player_vel
         if keys[pygame.K_SPACE]:
             player.shoot()
@@ -220,7 +234,14 @@ def main():
         for enemy in enemies[:]:
             enemy.move(enemy_vel)
             enemy.move_lasers(laser_vel, player)
-            if enemy.y + enemy.get_height() > HEIGHT:
+
+            if random.randrange(0, 2*60)  == 1:
+                enemy.shoot()
+
+            if collide(enemy, player):
+                player.health -= 10
+                enemies.remove(enemy)
+            elif enemy.y + enemy.get_height() > HEIGHT:
                 lives -= 1
                 enemies.remove(enemy)
 
