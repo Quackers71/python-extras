@@ -1,0 +1,16 @@
+*** Selenium Tutorial ***
+
+# Install Selenium
+C:\Users\Rob\Desktop\AWS EC2\python-extras>pip3.8 install selenium
+Collecting selenium
+  Downloading https://files.pythonhosted.org/packages/80/d6/4294f0b4bce4de0abf13e17190289f9d0613b0a44e5dd6a7f5ca98459853/selenium-3.141.0-py2.py3-none-any.whl (904kB)
+     |████████████████████████████████| 911kB 2.2MB/s
+Requirement already satisfied: urllib3 in c:\users\rob\appdata\local\programs\python\python38\lib\site-packages (from selenium) (1.25.9)
+Installing collected packages: selenium
+Successfully installed selenium-3.141.0
+
+# Install chromedriver
+https://sites.google.com/a/chromium.org/chromedriver/downloads
+# place the file in:
+C:\Program Files (x86)
+# then set your PATH = "{your_path}"
