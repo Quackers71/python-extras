@@ -14,3 +14,8 @@ https://sites.google.com/a/chromium.org/chromedriver/downloads
 # place the file in:
 C:\Program Files (x86)
 # then set your PATH = "{your_path}"
+
+on inspecting the Elements use:
+1. id
+2. name
+3. class
