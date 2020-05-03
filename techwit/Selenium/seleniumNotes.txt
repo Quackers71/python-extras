@@ -15,6 +15,12 @@ https://sites.google.com/a/chromium.org/chromedriver/downloads
 C:\Program Files (x86)
 # then set your PATH = "{your_path}"
 
+Links:
+https://selenium-python.readthedocs.io/api.html
+https://www.selenium.dev/selenium/docs/api/py/api.html
+https://chromedriver.storage.googleapis.com/index.html?path=81.0.4044.69/
+
+
 on inspecting the Elements use:
 1. id
 2. name
