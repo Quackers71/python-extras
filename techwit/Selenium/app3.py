@@ -1,4 +1,4 @@
-# Selenium Tutorial #1
+# Selenium Tutorial #3
 # https://sites.google.com/a/chromium.org/chromedriver/downloads
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -19,7 +19,7 @@ try:
     element = WebDriverWait(driver, 15).until(
         EC.presence_of_element_located((By.LINK_TEXT, "Beginner Python Tutorials"))
     )
-    element.clear()
+    #element.clear()
     element.click()
 
     element = WebDriverWait(driver, 15).until(
