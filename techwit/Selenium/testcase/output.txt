@@ -1,0 +1,11 @@
+C:\Users\Rob\Desktop\AWS EC2\python-extras\techwit\Selenium\testcase>py main.py
+
+DevTools listening on ws://127.0.0.1:60709/devtools/browser/7e94056d-2e3b-4ede-bfce-76e31f532855
+[33352:34684:0511/223828.276:ERROR:browser_switcher_service.cc(238)] XXX Init()
+[33352:34684:0511/223833.389:ERROR:device_event_log_impl.cc(162)] [22:38:33.389] Bluetooth: bluetooth_adapter_winrt.cc:1055 Getting Default Adapter failed.
+.
+----------------------------------------------------------------------
+Ran 1 test in 8.005s
+
+OK
+
