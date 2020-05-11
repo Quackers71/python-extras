@@ -10,4 +10,7 @@ https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-    < Py
 
 New stuff April 2020:
 
-https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg < Tech With Tim ***** 
+https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg # Tech With Tim
+
+Python Selenium Tutorial #1 - Web Scraping, Bots & Testing #techwit
+https://youtu.be/Xjv1sY630Uc
