@@ -14,3 +14,7 @@ https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg # Tech With Tim
 
 Python Selenium Tutorial #1 - Web Scraping, Bots & Testing #techwit
 https://youtu.be/Xjv1sY630Uc
+
+Flask Tutorials Playlist - How to Make Websites with Python
+https://www.youtube.com/playlist?list=PLzMcBGfZo4-n4vJJybUVV3Un_NFS5EOgX
+
