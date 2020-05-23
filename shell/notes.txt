@@ -4,4 +4,47 @@ https://missing.csail.mit.edu/2020/shell-tools/
 chmod a+x mcd.sh
 source mcd.sh
 mcd test
-/shell/test/ $ 
+/shell/test/ $
+
+true
+echo $?
+0
+
+false
+echo $?
+1
+
+false || echo "Oops fail"
+Oops fail
+
+true || echo "Will not be printed"
+
+true && echo "Things went well"
+Things went well
+
+false && echo "This will not print"
+
+false; echo "This will always print"
+This will always print
+
+foo=$(pwd)
+echo $foo
+/home/pi/repos/python-extras/shell
+
+echo "We are in $(pwd)"
+
+cat <(ls) <(ls ..)
+# concatenates the list of dir(s) into a temp file
+
+# Notes for example.sh
+
+man test
+INTEGER1 -ne INTEGER2
+       INTEGER1 is not equal to INTEGER2
+
+chmod a+x example.sh
+pi@raspberrypi:~/repos/python-extras/shell$ ./example.sh mcd.sh example.sh 
+Starting program at Sat 23 May 12:46:35 GMT 2020
+Running program ./example.sh with 2 arguments with pid 2571
+File mcd.sh does not have any foobar, adding one
+
