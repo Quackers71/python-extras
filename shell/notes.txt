@@ -120,4 +120,17 @@ In mcd.sh line 3:
     cd "$1"
     ^-- SC2164: Use cd ... || exit in case cd fails.
 
+$ man rg # ripgrep(rg)
+# I'll com back to this Installation
+
+
+$ tldr convert # similar to man but with Examples
+Imagemagick image conversion tool:
+More information: <https://imagemagick.org/script/convert.php>.
+
+# To install tldr
+$ sudo apt-get install -y nodejs npm
+$ sudo npm install -g tldr
+
+$ tldr --update
 
