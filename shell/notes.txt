@@ -103,4 +103,7 @@ $ diff <(ls foo) <(ls bar)
 ---
 > y
 
+$ ./script.py a b c
+bash: ./script.py: /usr/local/bin/python: bad interpreter: No such file or directory
+
 
