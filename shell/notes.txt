@@ -48,3 +48,38 @@ Starting program at Sat 23 May 12:46:35 GMT 2020
 Running program ./example.sh with 2 arguments with pid 2571
 File mcd.sh does not have any foobar, adding one
 
+convert ThePebble.{png,jpg}
+
+pi@raspberrypi:~/repos/python-extras/shell $ touch foo{,1,2,10}
+pi@raspberrypi:~/repos/python-extras/shell $ ll
+total 292
+-rwxr-xr-x 1 pi pi    478 May 23 12:46 example.sh
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo1
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo10
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo2
+
+@raspberrypi:~/repos/python-extras/shell $ tree project*
+project1
+└── src
+project2
+└── src
+
+2 directories, 0 files
+
+pi@raspberrypi:~/repos/python-extras/shell $ touch project{1,2}/src/test{1,2,3}.py
+pi@raspberrypi:~/repos/python-extras/shell $ tree project*
+project1
+└── src
+    ├── test1.py
+    ├── test2.py
+    └── test3.py
+project2
+└── src
+    ├── test1.py
+    ├── test2.py
+    └── test3.py
+
+2 directories, 6 files
+
+
