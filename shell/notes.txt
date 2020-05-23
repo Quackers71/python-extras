@@ -1,6 +1,8 @@
 ## Shell Tools and Scripting
 https://missing.csail.mit.edu/2020/shell-tools/
 
+#!/bin/bash
+
 { chmod a+x mcd.sh
   source mcd.sh
 }
@@ -105,5 +107,17 @@ $ diff <(ls foo) <(ls bar)
 
 $ ./script.py a b c
 bash: ./script.py: /usr/local/bin/python: bad interpreter: No such file or directory
+
+
+$ shellcheck mcd.sh 
+
+In mcd.sh line 1:
+mcd () {
+^-- SC2148: Tips depend on target shell and yours is unknown. Add a shebang.
+
+
+In mcd.sh line 3:
+    cd "$1"
+    ^-- SC2164: Use cd ... || exit in case cd fails.
 
 
