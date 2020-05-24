@@ -155,4 +155,50 @@ $ cat of.txt
 ./file2.php:11:function third() {
 ./file2.php:15:function listEmails($id) {
 
+## Top and Processes
+
+$ top
+$ ps aux 
+$ ps aux | grep chromium-browser # Messy
+$ pgrep chromium # process id's
+$ kill -9 {pid}
+
+$ top | grep chromium
+ 1091 pi        20   0  354420  35860  20232 S   0.3  3.8   1593:54 chromium-browse             
+
+pi@raspberrypi:~/repos/python-extras/joedel-linux $ pgrep chromium-browse
+938
+957
+959
+1071
+1091
+1102
+1347
+
+$ killall chromium-browse
+
+## Services
+
+$ sudo apt-get install -y apache2
+$ ps aux | grep apache2
+root     12349  0.0  0.3   7412  3720 ?        Ss   16:32   0:00 /usr/sbin/apache2 -k start
+www-data 12350  0.0  0.3 229812  3492 ?        Sl   16:32   0:00 /usr/sbin/apache2 -k start
+www-data 12352  0.0  0.4 230916  4260 ?        Sl   16:32   0:00 /usr/sbin/apache2 -k start
+pi       12538  0.0  0.0   4372   568 pts/0    S+   16:33   0:00 grep --color=auto apache2
+
+
+udo service apache2 status
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sun 2020-05-24 16:32:11 GMT; 2min 51s ago
+ Main PID: 12349 (apache2)
+   CGroup: /system.slice/apache2.service
+           ├─12349 /usr/sbin/apache2 -k start
+           ├─12350 /usr/sbin/apache2 -k start
+           └─12352 /usr/sbin/apache2 -k start
+
+May 24 16:32:11 raspberrypi systemd[1]: Starting The Apache HTTP Server...
+May 24 16:32:11 raspberrypi apachectl[12338]: AH00558: apache2: Could not reliably determine the
+May 24 16:32:11 raspberrypi systemd[1]: Started The Apache HTTP Server.
+
 
