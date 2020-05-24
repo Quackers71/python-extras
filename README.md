@@ -23,3 +23,6 @@ https://www.youtube.com/watch?v=kgII-YWo3Zw
 
 https://missing.csail.mit.edu/2020/shell-tools/
 
+## from The Complete Linux Course: Beginner to Power User!
+https://youtu.be/wBp0Rb-ZJak
+
