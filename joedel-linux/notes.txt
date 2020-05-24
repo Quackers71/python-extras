@@ -11,4 +11,148 @@ https://youtu.be/wBp0Rb-ZJak
 2:54:44 Configuring services using the command line
 2:59:20 Using CRONTABS to schedule tasks
 
+## Find cmd
+
+$ tree
+.
+├── anewone.PHP
+├── another.php
+├── an.TXT
+├── file2.php
+├── file3.php
+├── file.php
+├── four.TXT
+├── notes.txt
+├── one.PhP
+├── somethingelse.PHP
+├── three.txt
+└── two.txt
+
+$ find . -type f -iname "*.php"
+./somethingelse.PHP
+./anewone.PHP
+./one.PhP
+./file3.php
+./another.php
+./file.php
+./file2.php
+
+$ find /etc/ -type f -iname "*.conf"
+$ find . -type f -perm 0644
+$ find . -size +1k
+
+$ find . -type f -not -iname "*.php"
+./.notes.txt.swp
+./three.txt
+./two.txt
+./an.TXT
+./four.TXT
+./notes.txt
+
+# none recursive using '-maxdepth 1' flag & arg
+$ find /etc/ -maxdepth 1  -type f -iname "*.conf"
+/etc/ld.so.conf
+/etc/nsswitch.conf
+/etc/host.conf
+/etc/mke2fs.conf
+/etc/sensors3.conf
+/etc/request-key.conf
+/etc/libaudit.conf
+/etc/pip.conf
+/etc/logrotate.conf
+/etc/paxctld.conf
+/etc/sysctl.conf
+/etc/adduser.conf
+/etc/debconf.conf
+/etc/pam.conf
+/etc/gai.conf
+/etc/resolv.conf
+/etc/rsyslog.conf
+/etc/resolvconf.conf
+/etc/ca-certificates.conf
+/etc/usb_modeswitch.conf
+/etc/ucf.conf
+/etc/dhcpcd.conf
+/etc/idmapd.conf
+/etc/fuse.conf
+/etc/deluser.conf
+
+$ sudo find /etc/ -type f -iname "*.conf" -size +50k
+/etc/fonts/infinality/conf.src/60-group-tt-fonts.conf
+/etc/fonts/infinality/conf.src/60-group-non-tt-fonts.conf
+
+## grep cmd
+
+$ grep "function" file2.php file3.php 
+file2.php:function firstfunction($do, $it, $now) {
+file2.php:function third() {
+file2.php:function listEmails($id) {
+file3.php:function nother() {
+file3.php:function finalFunc() {
+
+$ grep -n -i "function" ./*
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+
+# find and grep cmd
+$ find . -type f -iname "*.php" -exec grep -n -i "function" {} +
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+
+$ find . -type f -size -10k -name "*.php" -exec grep -n -i "function" {} +
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+
+ $ find . -type f -size -10k -iname "*.php" -exec grep -n -i "sandwich" {} + > ref.txt
+pi@raspberrypi:~/repos/python-extras/joedel-linux $ echo $?
+0
+pi@raspberrypi:~/repos/python-extras/joedel-linux $ cat ref.txt 
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+
+$ find . -type f -size -10k -iname "*.php" -exec grep -n -i "function" {} + | tee of.txt
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+$ cat of.txt
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+
 

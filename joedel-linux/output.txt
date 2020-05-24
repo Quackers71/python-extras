@@ -1,0 +1,16 @@
+.
+├── anewone.PHP
+├── another.php
+├── an.TXT
+├── file2.php
+├── file3.php
+├── file.php
+├── four.TXT
+├── notes.txt
+├── one.PhP
+├── output.txt
+├── somethingelse.PHP
+├── three.txt
+└── two.txt
+
+0 directories, 13 files
