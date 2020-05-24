@@ -121,8 +121,8 @@ In mcd.sh line 3:
     ^-- SC2164: Use cd ... || exit in case cd fails.
 
 $ man rg # ripgrep(rg)
-# I'll com back to this Installation
-
+$ sudo apt-get install -y cargo
+# Requires further work to get rg working!
 
 $ tldr convert # similar to man but with Examples
 Imagemagick image conversion tool:
@@ -190,4 +190,17 @@ $ find . -path '**/test/*.py' -type f
 
 $ find . -name "*.tmp" -exec rm {} \;
 
+$ sudo apt-get install locate -y
+$ locate project*
+$ sudo updatedb
 
+
+$ grep foobar -R .
+Binary file ./.notes.txt.swp matches
+./notes.txt:File mcd.sh does not have any foobar, adding one
+./mcd.sh:# foobar
+./example.sh:    grep foobar "$file" > /dev/null 2> /dev/null
+./example.sh:	echo "File $file does not have any foobar, adding one"
+./example.sh:	echo "# foobar" >> "$file"
+
+ 
