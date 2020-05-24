@@ -201,4 +201,13 @@ May 24 16:32:11 raspberrypi systemd[1]: Starting The Apache HTTP Server...
 May 24 16:32:11 raspberrypi apachectl[12338]: AH00558: apache2: Could not reliably determine the
 May 24 16:32:11 raspberrypi systemd[1]: Started The Apache HTTP Server.
 
+$ vim /etc/apache2/ports.conf
+# changed from 'Listen 80' to 'Listen 8080'
+# However use systemctl as it is the new standard i.e.
+$ sudo systemctl status apache2
+$ sudo systemctl restart apache2
 
+
+## crontabs
+
+$ 
