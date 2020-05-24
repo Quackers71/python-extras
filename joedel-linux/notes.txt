@@ -1,0 +1,14 @@
+# from The Complete Linux Course: Beginner to Power User!
+https://youtu.be/wBp0Rb-ZJak
+
+2:24:43 The FIND command and it's practical uses
+2:36:10 GREP command explained
+2:39:10 Using GREP in conjunction with FIND
+2:42:26 Redirecting the output of a command
+2:45:42 The TOP command and its uses
+2:47:01 How to view the entire list of processes and closing applications
+2:52:36 Services explained
+2:54:44 Configuring services using the command line
+2:59:20 Using CRONTABS to schedule tasks
+
+
