@@ -11,4 +11,74 @@ https://youtu.be/wBp0Rb-ZJak
 2:54:44 Configuring services using the command line
 2:59:20 Using CRONTABS to schedule tasks
 
+## Find cmd
+
+$ tree
+.
+├── anewone.PHP
+├── another.php
+├── an.TXT
+├── file2.php
+├── file3.php
+├── file.php
+├── four.TXT
+├── notes.txt
+├── one.PhP
+├── somethingelse.PHP
+├── three.txt
+└── two.txt
+
+$ find . -type f -iname "*.php"
+./somethingelse.PHP
+./anewone.PHP
+./one.PhP
+./file3.php
+./another.php
+./file.php
+./file2.php
+
+$ find /etc/ -type f -iname "*.conf"
+$ find . -type f -perm 0644
+$ find . -size +1k
+
+$ find . -type f -not -iname "*.php"
+./.notes.txt.swp
+./three.txt
+./two.txt
+./an.TXT
+./four.TXT
+./notes.txt
+
+# none recursive using '-maxdepth 1' flag & arg
+$ find /etc/ -maxdepth 1  -type f -iname "*.conf"
+/etc/ld.so.conf
+/etc/nsswitch.conf
+/etc/host.conf
+/etc/mke2fs.conf
+/etc/sensors3.conf
+/etc/request-key.conf
+/etc/libaudit.conf
+/etc/pip.conf
+/etc/logrotate.conf
+/etc/paxctld.conf
+/etc/sysctl.conf
+/etc/adduser.conf
+/etc/debconf.conf
+/etc/pam.conf
+/etc/gai.conf
+/etc/resolv.conf
+/etc/rsyslog.conf
+/etc/resolvconf.conf
+/etc/ca-certificates.conf
+/etc/usb_modeswitch.conf
+/etc/ucf.conf
+/etc/dhcpcd.conf
+/etc/idmapd.conf
+/etc/fuse.conf
+/etc/deluser.conf
+
+$ sudo find /etc/ -type f -iname "*.conf" -size +50k
+/etc/fonts/infinality/conf.src/60-group-tt-fonts.conf
+/etc/fonts/infinality/conf.src/60-group-non-tt-fonts.conf
+
 
