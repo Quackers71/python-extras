@@ -299,3 +299,5 @@ http://localhost:8080/index.php
 # added entry to /etc/hosts
 127.0.1.1	quackers.ninja
 # now this URL .html or .php file in /var/www/html/ dir
+
+https://www.guru99.com/php-vs-javascript.html
