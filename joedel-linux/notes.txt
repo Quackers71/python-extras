@@ -1,6 +1,10 @@
 # from The Complete Linux Course: Beginner to Power User!
 https://youtu.be/wBp0Rb-ZJak
 
+Joseph Delgadillo
+https://www.youtube.com/channel/UCqR4a4lUDbDkAFQnhw4pfXQ/playlists
+https://jtdigital.tech/
+
 2:24:43 The FIND command and it's practical uses
 2:36:10 GREP command explained
 2:39:10 Using GREP in conjunction with FIND
@@ -10,6 +14,22 @@ https://youtu.be/wBp0Rb-ZJak
 2:52:36 Services explained
 2:54:44 Configuring services using the command line
 2:59:20 Using CRONTABS to schedule tasks
+
+4:42:06 Apache 2, PHP 5, and MySQL setup
+4:45:36 Server configuration
+4:51:14 Linux hosts file explained
+
+5:57:35 Adding/removing users through GUI
+6:01:09 Adding/removing users through CLI
+6:06:55 Adding users to a group
+6:10:51 Introduction to networking
+6:17:41 Local area network (LAN) explained
+6:25:08 Networking commands
+6:35:40 NETSTAT command
+6:40:39 Linux host file
+6:49:59 TRACEROUTE commands
+6:53:57 Network mapping explained
+
 
 ## Find cmd
 
