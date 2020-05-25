@@ -278,4 +278,21 @@ $ mysql --version
 mysql  Ver 15.1 Distrib 10.1.44-MariaDB, for debian-linux-gnueabihf (armv7l) using readline 5.2
 pi
 
+$ sudo chown pi:pi -R /var/www/
+$ sudo vim /etc/apache2/envvars
+# change stuff to:
+export APACHE_RUN_USER=pi
+export APACHE_RUN_GROUP=pi
+
+# renamed /var/www/html/index.html to .old
+$ vim /var/www/html/index.php
+
+<?php
+phpinfo();
+?>
+
+$ sudo systemctl restart apache2
+# See phpinfo() page in Chromium i.e.
+http://localhost:8080/index.php
+
 
