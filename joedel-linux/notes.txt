@@ -301,3 +301,50 @@ http://localhost:8080/index.php
 # now this URL .html or .php file in /var/www/html/ dir
 
 https://www.guru99.com/php-vs-javascript.html
+
+## Networking Commands
+
+$ ping www.google.co.uk
+$ ifconfig
+$ sudo apt-get install tcpdump -y
+
+$  sudo tcpdump -c 10
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wlan0, link-type EN10MB (Ethernet), capture size 262144 bytes
+20:26:38.463483 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 3901734583:3901736043, ack 181331170, win 61104, length 1460
+20:26:38.463641 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 1460:2920, ack 1, win 61104, length 1460
+20:26:38.465770 IP 192.168.1.28.51506 > 192.168.1.1.domain: 20312+ PTR? 28.1.168.192.in-addr.arpa. (43)
+20:26:38.467128 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 2920:4380, ack 1, win 61104, length 1460
+20:26:38.467167 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 4380:5840, ack 1, win 61104, length 1460
+20:26:38.467574 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 5840:7300, ack 1, win 61104, length 1460
+20:26:38.467741 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 7300:8760, ack 1, win 61104, length 1460
+20:26:38.507992 IP 192.168.1.28.38785 > 192.168.1.1.domain: 38199+ PTR? 1.1.168.192.in-addr.arpa. (42)
+20:26:38.523037 IP 192.168.1.1.domain > 192.168.1.28.38785: 38199 NXDomain 0/1/0 (91)
+20:26:38.767635 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 30751:32211, ack 11, win 61104, length 1460
+10 packets captured
+44 packets received by filter
+32 packets dropped by kernel
+
+# Capture Packets in ASCII
+$ sudo tcpdump -c 5 -A
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wlan0, link-type EN10MB (Ethernet), capture size 262144 bytes
+20:28:08.270350 ARP, Request who-has 192.168.1.225 tell 192.168.1.1, length 28
+........ .*.#...............
+20:28:08.273001 IP 192.168.1.28.52850 > 192.168.1.1.domain: 61412+ PTR? 225.1.168.192.in-addr.arpa. (44)
+E..H.L@.@............r.5.4...............225.1.168.192.in-addr.arpa.....
+20:28:08.289258 IP 192.168.1.1.domain > 192.168.1.28.52850: 61412 NXDomain 0/1/0 (93)
+E..y..@.@............5.r.e[..............225.1.168.192.in-addr.arpa................%	localhost..root......	:...Q..$...	:.
+20:28:08.290987 IP 192.168.1.28.49051 > 192.168.1.1.domain: 65036+ PTR? 1.1.168.192.in-addr.arpa. (42)
+E..F.N@.@..............5.21..............1.1.168.192.in-addr.arpa.....
+20:28:08.307073 IP 192.168.1.1.domain > 192.168.1.28.49051: 65036 NXDomain 0/1/0 (91)
+E..w..@.@............5...c...............1.1.168.192.in-addr.arpa................%	localhost..root......	:...Q..$...	:.
+5 packets captured
+7 packets received by filter
+0 packets dropped by kernel
+
+# Check out files I have output too i.e. wlan0.txt
+
+$ sudo tcpdump -i wlan0 port 22
+
+
