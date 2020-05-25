@@ -26,3 +26,6 @@ https://missing.csail.mit.edu/2020/shell-tools/
 ## from The Complete Linux Course: Beginner to Power User!
 https://youtu.be/wBp0Rb-ZJak
 
+## Something else to look at for my Raspberry Pi ;-)
+https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress
+
