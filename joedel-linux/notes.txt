@@ -250,8 +250,22 @@ $ crontab -e
 
 ## apache2 - Lamp Stack
 
-$ sudo apt-get install apache2 php mysql-server
+$ sudo apt-get install apache2 php5 mysql-server
+# Had to re-install php and received:
+$ sudo apt-get install php
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libapache2-mod-php7.0 php-common php7.0 php7.0-cli php7.0-common php7.0-json php7.0-opcache
+  php7.0-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php7.0 php php-common php7.0 php7.0-cli php7.0-common php7.0-json
+  php7.0-opcache php7.0-readline
 
+# packages now installed ;-)
 pi@raspberrypi: $ php -v
 PHP 7.0.33-0+deb9u7 (cli) (built: Feb 16 2020 15:11:40) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
@@ -263,4 +277,5 @@ Server built:   2019-10-13T15:43:54
 $ mysql --version
 mysql  Ver 15.1 Distrib 10.1.44-MariaDB, for debian-linux-gnueabihf (armv7l) using readline 5.2
 pi
+
 
