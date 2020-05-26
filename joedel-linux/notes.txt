@@ -387,6 +387,13 @@ $ netstat -tan > netstat-tcp-all-num.txt
 #to the /etc/hosts file
 # However, the website purple.com has cloudflare sat infront of it!
 
-
+# How to change the hostname ;-)
+$ sudo hostnamectl set-hostname qpi
+$ sudo vim /etc/hosts
+sudo: unable to resolve host qpi
+$ sudo systemctl restart hostname
+Failed to restart hostname.service: Unit hostname.service is masked.
+$ hostname
+qpi
 
 
