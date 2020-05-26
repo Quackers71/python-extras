@@ -381,4 +381,12 @@ tcp6       0      0 [::]:http               [::]:*                  LISTEN
 # numeric, tcp & all sockets
 $ netstat -tan > netstat-tcp-all-num.txt
 
+# added
+104.22.34.105	jojopi
+
+#to the /etc/hosts file
+# However, the website purple.com has cloudflare sat infront of it!
+
+
+
 
