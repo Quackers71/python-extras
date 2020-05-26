@@ -1,0 +1,10 @@
+## Super Notes on setting up .vimrc and more...
+# from: https://www.youtube.com/watch?v=n9k9scbTuvQ
+
+: source % # to implement changes to the source code
+
+$ mkdir ~/.vim/undodir -p
+$ sudo vim ~/.vimrc
+# see file .vimrc
+
+
