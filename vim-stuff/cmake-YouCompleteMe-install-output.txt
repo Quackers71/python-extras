@@ -1,0 +1,167 @@
+$ sudo apt-get install cmake
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  cmake-data libjsoncpp1
+Suggested packages:
+  codeblocks eclipse ninja-build
+The following NEW packages will be installed:
+  cmake cmake-data libjsoncpp1
+0 upgraded, 3 newly installed, 0 to remove and 417 not upgraded.
+Need to get 3,685 kB of archives.
+After this operation, 19.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://mirror.mythic-beasts.com/raspbian/raspbian stretch/main armhf cmake-data all 3.7.2-1 [1,216 kB]
+Get:2 http://mirror.mythic-beasts.com/raspbian/raspbian stretch/main armhf libjsoncpp1 armhf 1.7.4-3 [66.2 kB]
+Get:3 http://mirror.mythic-beasts.com/raspbian/raspbian stretch/main armhf cmake armhf 3.7.2-1 [2,402 kB]
+Fetched 3,685 kB in 2s (1,362 kB/s)
+Selecting previously unselected package cmake-data.
+(Reading database ... 138161 files and directories currently installed.)
+Preparing to unpack .../cmake-data_3.7.2-1_all.deb ...
+Unpacking cmake-data (3.7.2-1) ...
+Selecting previously unselected package libjsoncpp1:armhf.
+Preparing to unpack .../libjsoncpp1_1.7.4-3_armhf.deb ...
+Unpacking libjsoncpp1:armhf (1.7.4-3) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../cmake_3.7.2-1_armhf.deb ...
+Unpacking cmake (3.7.2-1) ...
+Setting up cmake-data (3.7.2-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Setting up libjsoncpp1:armhf (1.7.4-3) ...
+Setting up cmake (3.7.2-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+pi@raspberrypi:~/.vim/plugged/YouCompleteMe $ cmake
+Usage
+
+  cmake [options] <path-to-source>
+  cmake [options] <path-to-existing-build>
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run 'cmake --help' for more information.
+
+pi@raspberrypi:~/.vim/plugged/YouCompleteMe $ ./install.py --ts-completer
+Searching Python 3.5 libraries...
+Found Python library: /usr/lib/python3.5/config-3.5m-arm-linux-gnueabihf/libpython3.5.so
+Found Python headers folder: /usr/include/python3.5m
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonLibs: /usr/lib/python3.5/config-3.5m-arm-linux-gnueabihf/libpython3.5.so (found suitable version "3.5.3", minimum required is "3.5") 
+-- NOT using libclang, no semantic completion for C/C++/ObjC will be available
+-- NOT using clang-tidy for static analysis.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/ycm_build_qh8ckukb
+Scanning dependencies of target BoostParts
+[  3%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/codecvt_error_category.cpp.o
+[  7%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/directory.cpp.o
+[ 11%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/exception.cpp.o
+[ 14%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/operations.cpp.o
+[ 18%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/path.cpp.o
+[ 22%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/path_traits.cpp.o
+[ 25%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/portability.cpp.o
+[ 29%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/unique_path.cpp.o
+[ 33%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/utf8_codecvt_facet.cpp.o
+[ 37%] Building CXX object BoostParts/CMakeFiles/BoostParts.dir/libs/filesystem/src/windows_file_codecvt.cpp.o
+[ 40%] Linking CXX static library libBoostParts.a
+[ 40%] Built target BoostParts
+Scanning dependencies of target ycm_core
+[ 44%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Candidate.cpp.o
+[ 51%] Building CXX object ycm/CMakeFiles/ycm_core.dir/CharacterRepository.cpp.o
+[ 51%] Building CXX object ycm/CMakeFiles/ycm_core.dir/CandidateRepository.cpp.o
+[ 55%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Character.cpp.o
+[ 59%] Building CXX object ycm/CMakeFiles/ycm_core.dir/CodePoint.cpp.o
+[ 62%] Building CXX object ycm/CMakeFiles/ycm_core.dir/CodePointRepository.cpp.o
+[ 70%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierDatabase.cpp.o
+[ 70%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierCompleter.cpp.o
+[ 74%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierUtils.cpp.o
+[ 77%] Building CXX object ycm/CMakeFiles/ycm_core.dir/PythonSupport.cpp.o
+[ 81%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Result.cpp.o
+[ 85%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Utils.cpp.o
+[ 88%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Word.cpp.o
+[ 96%] Building CXX object ycm/CMakeFiles/ycm_core.dir/versioning.cpp.o
+[ 96%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o
+[100%] Linking CXX shared library /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/ycm_core.so
+[100%] Built target ycm_core
+-- The C compiler identification is GNU 6.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PythonLibs: /usr/lib/python3.5/config-3.5m-arm-linux-gnueabihf/libpython3.5.so (found version "3.5.3") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/regex_build_ku22kxtg
+Scanning dependencies of target _regex
+[ 66%] Building C object CMakeFiles/_regex.dir/regex_3/_regex_unicode.c.o
+[ 66%] Building C object CMakeFiles/_regex.dir/regex_3/_regex.c.o
+[100%] Linking C shared library /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/cregex/regex_3/_regex.so
+[100%] Built target _regex
+running build
+running build_py
+creating /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build
+creating /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3
+creating /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog
+copying src/watchdog/watchmedo.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog
+copying src/watchdog/events.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog
+copying src/watchdog/version.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog
+copying src/watchdog/__init__.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog
+creating /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/unicode_paths.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/echo.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/dirsnapshot.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/bricks.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/compat.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/delayed_queue.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/platform.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/win32stat.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+copying src/watchdog/utils/__init__.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/utils
+creating /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/kqueue.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/winapi.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/fsevents.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/fsevents2.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/inotify_c.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/inotify_buffer.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/read_directory_changes.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/api.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/inotify.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/polling.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+copying src/watchdog/observers/__init__.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/observers
+creating /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/tricks
+copying src/watchdog/tricks/__init__.py -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/watchdog_deps/watchdog/build/lib3/watchdog/tricks
+running egg_info
+creating src/watchdog.egg-info
+writing src/watchdog.egg-info/PKG-INFO
+writing entry points to src/watchdog.egg-info/entry_points.txt
+writing dependency_links to src/watchdog.egg-info/dependency_links.txt
+writing requirements to src/watchdog.egg-info/requires.txt
+writing top-level names to src/watchdog.egg-info/top_level.txt
+writing manifest file 'src/watchdog.egg-info/SOURCES.txt'
+reading manifest file 'src/watchdog.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.h' under directory 'src'
+writing manifest file 'src/watchdog.egg-info/SOURCES.txt'
+(node:5892) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+/home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsc -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tsserver/lib/node_modules/typescript/bin/tsc
+/home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver -> /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tsserver/lib/node_modules/typescript/bin/tsserver
+typescript@3.8.3 /home/pi/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/tsserver/lib/node_modules/typescript
+

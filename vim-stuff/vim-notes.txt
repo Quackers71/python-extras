@@ -7,4 +7,10 @@ $ mkdir ~/.vim/undodir -p
 $ sudo vim ~/.vimrc
 # see file .vimrc
 
+# install YouCompleteMe
+$ cd ~/.vim/plugged/YouCompleteMe/
+$ ./install.py --ts-completer
 
+# if required: $ sudo apt-get install cmake -y
+
+# Didn't work but will come back to this at some point!
