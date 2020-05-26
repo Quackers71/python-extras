@@ -347,4 +347,38 @@ E..w..@.@............5...c...............1.1.168.192.in-addr.arpa...............
 
 $ sudo tcpdump -i wlan0 port 22
 
+## Netstat
+
+# numeric & routing table
+$ netstat -nr
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG        0 0          0 wlan0
+192.168.1.0     0.0.0.0         255.255.255.0   U         0 0          0 wlan0
+
+# interface table
+$ netstat -i
+Kernel Interface table
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+eth0      1500        0      0      0 0             0      0      0      0 BMU
+lo       65536      513      0      0 0           513      0      0      0 LRU
+wlan0     1500  2431605      0      0 0       3075199      0      0      0 BMRU
+
+# tcp & all sockets
+$ netstat -ta
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:mysql         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:5900            0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:36656         localhost:42743         ESTABLISHED
+tcp        0      0 192.168.1.28:5900       192.168.1.90:54723      ESTABLISHED
+tcp        0      0 localhost:42743         localhost:36656         ESTABLISHED
+tcp6       0      0 localhost:ipp           [::]:*                  LISTEN     
+tcp6       0      0 [::]:5900               [::]:*                  LISTEN     
+tcp6       0      0 [::]:http               [::]:*                  LISTEN 
+
+# numeric, tcp & all sockets
+$ netstat -tan > netstat-tcp-all-num.txt
+
 
