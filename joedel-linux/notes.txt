@@ -396,4 +396,23 @@ Failed to restart hostname.service: Unit hostname.service is masked.
 $ hostname
 qpi
 
+## traceroute
+# sudo apt-get install traceroute -y
+
+$ traceroute google.co.uk
+traceroute to google.co.uk (216.58.206.99), 30 hops max, 60 byte packets
+ 1  192.168.1.1 (192.168.1.1)  2.832 ms  2.866 ms  3.235 ms
+ 2  * * *
+ 3  * * *
+ 4  213.121.98.144 (213.121.98.144)  23.599 ms  25.055 ms  25.895 ms
+ 5  87.237.20.134 (87.237.20.134)  41.880 ms  42.205 ms  42.296 ms
+ 6  74.125.52.218 (74.125.52.218)  31.649 ms  17.571 ms  22.074 ms
+ 7  * * *
+ 8  64.233.175.90 (64.233.175.90)  24.567 ms 108.170.232.96 (108.170.232.96)  27.034 ms 172.253.65.210 (172.253.65.210)  19.868 ms
+ 9  74.125.242.82 (74.125.242.82)  20.042 ms 216.239.58.221 (216.239.58.221)  22.712 ms 74.125.242.115 (74.125.242.115)  20.661 ms
+10  lhr25s14-in-f3.1e100.net (216.58.206.99)  16.796 ms 209.85.250.185 (209.85.250.185)  17.949 ms 209.85.241.211 (209.85.241.211)  18.027 ms
+
+$ traceroute ec2-35-177-35-250.eu-west-2.compute.amazonaws.com > myEC2AWSserver.txt
+# See Output File
+
 
