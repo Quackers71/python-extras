@@ -1,0 +1,56 @@
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-27 08:39 GMT
+Nmap scan report for ec2-35-177-35-250.eu-west-2.compute.amazonaws.com (35.177.35.250)
+Host is up (0.036s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE VERSION
+22/tcp  open   ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|_  256 b6:5b:30:d4:ad:be:0b:4d:8a:73:ef:49:5c:ce:1e:3b (ECDSA)
+80/tcp  open   http    Apache httpd 2.2.34 ((Amazon))
+|_http-server-header: Apache/2.2.34 (Amazon)
+|_http-title: Test Page for the Apache HTTP Server on Amazon Linux AMI
+443/tcp closed https
+
+Nmap scan report for 192.168.1.1
+Host is up (0.018s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE    VERSION
+23/tcp   open  telnet?
+53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1
+| dns-nsid: 
+|   id.server: 
+|_  bind.version: dnsmasq-2.15-OpenDNS-1
+80/tcp   open  tcpwrapped
+| http-auth: 
+| HTTP/1.0 401 Unauthorized\x0D
+|_  Basic realm=NETGEAR WNDR3700v3
+|_http-title: 401 Unauthorized
+5000/tcp open  tcpwrapped
+8200/tcp open  upnp       ReadyDLNA 1.0.24 (DLNADOC 1.50; UPnP 1.0)
+Service Info: OS: Linux 2.6; CPE: cpe:/o:linux:linux_kernel:2.6
+
+Nmap scan report for 192.168.1.28
+Host is up (0.00056s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    Apache httpd 2.4.25 ((Raspbian))
+|_http-server-header: Apache/2.4.25 (Raspbian)
+|_http-title: phpinfo()
+5900/tcp open  vnc     RealVNC Enterprise 5.3 or later (protocol 5.0)
+| vnc-info: 
+|   Protocol version: 005.000
+|   Security types: 
+|     Unknown security type (13)
+|     RA2 (5)
+|     RA2ne (6)
+|     Unknown security type (130)
+|     VNC Authentication (2)
+|_    Unknown security type (192)
+
+Nmap scan report for 192.168.1.110
+Host is up (0.14s latency).
+All 1000 scanned ports on 192.168.1.110 are closed
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 5 IP addresses (4 hosts up) scanned in 187.78 seconds

@@ -431,3 +431,43 @@ Nmap done: 1 IP address (1 host up) scanned in 44.02 seconds
 
 # further output seen with files starting with nmap-?????-???.txt
 
+$ nmap ec2-35-177-35-250.eu-west-2.compute.amazonaws.com
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-27 08:11 GMT
+Nmap scan report for ec2-35-177-35-250.eu-west-2.compute.amazonaws.com (35.177.35.250)
+Host is up (0.020s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+80/tcp  open   http
+443/tcp closed https
+
+Nmap done: 1 IP address (1 host up) scanned in 7.16 seconds
+
+# This will scan hosts and ip's from the networks.txt file
+$ nmap -iL networks.txt
+
+$ nmap -iL networks.txt > nmap-networks-output.txt
+$ nmap -AiL networks.txt > nmap-networks-os-output.txt
+$ nmap -sP 192.168.1.0/24 > currentConnectedHosts.txt
+
+$ sudo nmap -O 192.168.1.7
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-27 08:54 GMT
+Nmap scan report for 192.168.1.7
+Host is up (0.016s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+1443/tcp open  ies-lm
+7000/tcp open  afs3-fileserver
+MAC Address: 78:28:CA:B1:7C:0E (Sonos)
+Device type: general purpose
+Running: Linux 3.X
+OS CPE: cpe:/o:linux:linux_kernel:3
+OS details: Linux 3.2 - 3.10, Linux 3.2 - 3.16
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.20 seconds
+
+
