@@ -1,0 +1,12 @@
+##Bash Scripting
+# from https://youtu.be/e7BufAVwDiM
+
+$ cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+
+
+
