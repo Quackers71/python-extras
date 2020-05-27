@@ -203,4 +203,7 @@ Binary file ./.notes.txt.swp matches
 ./example.sh:	echo "File $file does not have any foobar, adding one"
 ./example.sh:	echo "# foobar" >> "$file"
 
- 
+$ grep "#!" -R --invert-match . > grep-everything-but-string.txt
+$ grep "#!" -R . > grep-string.txt
+
+

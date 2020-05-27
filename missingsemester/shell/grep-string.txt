@@ -1,0 +1,7 @@
+Binary file ./Kylie and Lily.jpg matches
+./script.py:#!/usr/bin/env python
+Binary file ./ThePebble.png matches
+./test.sh:#!/bin/bash
+./notes.txt:#!/bin/bash
+./mcd.sh:#!/bin/bash
+./example.sh:#!/bin/bash
