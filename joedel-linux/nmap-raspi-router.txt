@@ -1,0 +1,20 @@
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-26 20:38 GMT
+Nmap scan report for 192.168.1.1
+Host is up (0.015s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+23/tcp   open  telnet
+53/tcp   open  domain
+80/tcp   open  http
+5000/tcp open  upnp
+8200/tcp open  trivnet1
+
+Nmap scan report for 192.168.1.28
+Host is up (0.00081s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+5900/tcp open  vnc
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 1.88 seconds

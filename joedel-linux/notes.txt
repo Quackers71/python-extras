@@ -415,4 +415,19 @@ traceroute to google.co.uk (216.58.206.99), 30 hops max, 60 byte packets
 $ traceroute ec2-35-177-35-250.eu-west-2.compute.amazonaws.com > myEC2AWSserver.txt
 # See Output File
 
+## using nmap
+
+$ nmap 192.168.1.13
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-26 20:32 GMT
+Nmap scan report for 192.168.1.13
+Host is up (0.016s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE
+9080/tcp  open  glrpc
+62078/tcp open  iphone-sync
+
+Nmap done: 1 IP address (1 host up) scanned in 44.02 seconds
+
+# further output seen with files starting with nmap-?????-???.txt
 
