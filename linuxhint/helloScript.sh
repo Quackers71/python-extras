@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cat << kreativ
-some creative text
-and another line
-kreativ
+count=10
 
-cat << EOF
-The current working directory is: $PWD
-You are logged in as: $(whoami)
-EOF
+if [ $count -eq 8 ]
+then 
+        echo "the condition is true"
+else
+        echo "the confition is false"
+fi
+
