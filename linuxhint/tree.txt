@@ -1,0 +1,555 @@
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+Thu 28 May 21:38:21 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 25M 439M 6% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 25M 439M 6% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+Thu 28 May 21:42:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+Thu 28 May 21:43:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+Thu 28 May 21:44:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 25M 439M 6% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+Thu 28 May 21:45:02 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000
+Thu 28 May 21:46:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 8 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000 /dev
+Thu 28 May 21:47:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 23M 442M 5% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000 /dev
+Thu 28 May 21:48:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% / devtmpfs 460M 0 460M 0% /dev tmpfs 464M 25M 439M 6% /dev/shm tmpfs 464M 18M 446M 4% /run tmpfs 5.0M 4.0K 5.0M 1% /run/lock tmpfs 464M 0 464M 0% /sys/fs/cgroup /dev/mmcblk0p1 41M 21M 21M 51% /boot tmpfs 93M 4.0K 93M 1% /run/user/1000 /dev
+Thu 28 May 21:49:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on devtmpfs 460M 0 460M 0% /dev
+Thu 28 May 21:50:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:51:02 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:52:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:53:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:54:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:55:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:56:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:57:01 GMT 2020
+.
+├── bashTemplate.sh
+├── elifScript.sh
+├── ifand2.sh
+├── ifand.sh
+├── notes.txt
+├── output.txt
+├── tree-cron2.sh
+├── tree-cron.sh
+└── tree.txt
+
+0 directories, 9 files
+Filesystem Size Used Avail Use% Mounted on /dev/root 30G 6.4G 22G 23% /
+Thu 28 May 21:58:01 GMT 2020

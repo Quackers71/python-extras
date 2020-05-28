@@ -8,5 +8,6 @@ $ cat /etc/shells
 /bin/bash
 /bin/rbash
 
-
+# crontab -e
+*/1 * * * *  /home/pi/repos/python-extras/linuxhint/./tree-cron.sh
 
