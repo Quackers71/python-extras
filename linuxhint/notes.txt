@@ -55,4 +55,29 @@ It's a BMW
 # logrotate ;-)
 https://www.thegeekstuff.com/2010/07/logrotate-examples/
 
+# Add your file in /etc/logrotate.d/
+$ cat custom-tree
+/home/pi/tree-zip.txt {
+maxsize 50M
+daily
+rotate 7
+compress
+notifempty
+create
+}
+# You can manually run the logrotate using:
+$ sudo logrotate -f /etc/logrotate.conf
+
+# from https://www.networkworld.com/article/3218728/how-log-rotation-works-with-logrotate.html
+
+# The important files to pay attention to are:
+
+* /usr/sbin/logrotate -- the logrotate command itself (the executable)
+* /etc/cron.daily/logrotate -- the shell script that runs logrotate on a daily basis (note that it might be /etc/cron.daily/logrotate.cron on some systems)
+* /etc/logrotate.conf -- the log rotation configuration file
+
+# Another important file is /etc/logrotate.d, included in the process through this line in the /etc/logrotate.conf file:
+
+include /etc/logrotate.d
+
 
