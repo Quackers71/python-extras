@@ -157,4 +157,11 @@ $ ./script-output.sh
 
 ## Pipes - send output from one script to another
 
+# exported MESSAGE variable to another script & echo'd the variable i.e.
+# ran:
+$ ./pipes-send.sh
+The message from pipes-send script is : Hello Linux Peeple # output
+
+## Numbers & Arithmetic
+# Adding numbers - output - expressions & Hex
 
