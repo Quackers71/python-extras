@@ -60,7 +60,7 @@ $ cat custom-tree
 /home/pi/tree-zip.txt {
 maxsize 50M
 daily
-rotate 7
+rotate 4
 compress
 notifempty
 create
@@ -79,5 +79,49 @@ $ sudo logrotate -f /etc/logrotate.conf
 # Another important file is /etc/logrotate.d, included in the process through this line in the /etc/logrotate.conf file:
 
 include /etc/logrotate.d
+
+# more cron stuff related to logrotate:
+pi@raspberrypi:/etc/logrotate.d $ ll /etc/cron*
+-rw-r--r-- 1 root root  722 May 19  2015 /etc/crontab
+
+/etc/cron.d:
+total 4
+-rw-r--r-- 1 root root 712 Jan  1  2017 php
+
+/etc/cron.daily:
+total 36
+-rwxr-xr-x 1 root root  539 Jun 16  2019 apache2
+-rwxr-xr-x 1 root root 1474 Sep 13  2017 apt-compat
+-rwxr-xr-x 1 root root  314 Apr 18  2017 aptitude
+-rwxr-xr-x 1 root root  355 Oct 25  2016 bsdmainutils
+-rwxr-xr-x 1 root root 1597 Feb 22  2017 dpkg
+-rwxr-xr-x 1 root root 2211 Apr 13  2014 locate
+-rwxr-xr-x 1 root root   89 May  5  2015 logrotate
+-rwxr-xr-x 1 root root 1065 Dec 13  2016 man-db
+-rwxr-xr-x 1 root root  249 May 17  2017 passwd
+
+/etc/cron.hourly:
+total 4
+-rwxr-xr-x 1 root root 191 Feb 22  2012 fake-hwclock
+
+/etc/cron.monthly:
+total 0
+
+/etc/cron.weekly:
+total 4
+-rwxr-xr-x 1 root root 723 Dec 13  2016 man-db
+pi@raspberrypi:/etc/logrotate.d $ ll /etc/cron*/*
+-rwxr-xr-x 1 root root  539 Jun 16  2019 /etc/cron.daily/apache2
+-rwxr-xr-x 1 root root 1474 Sep 13  2017 /etc/cron.daily/apt-compat
+-rwxr-xr-x 1 root root  314 Apr 18  2017 /etc/cron.daily/aptitude
+-rwxr-xr-x 1 root root  355 Oct 25  2016 /etc/cron.daily/bsdmainutils
+-rwxr-xr-x 1 root root 1597 Feb 22  2017 /etc/cron.daily/dpkg
+-rwxr-xr-x 1 root root 2211 Apr 13  2014 /etc/cron.daily/locate
+-rwxr-xr-x 1 root root   89 May  5  2015 /etc/cron.daily/logrotate
+-rwxr-xr-x 1 root root 1065 Dec 13  2016 /etc/cron.daily/man-db
+-rwxr-xr-x 1 root root  249 May 17  2017 /etc/cron.daily/passwd
+-rw-r--r-- 1 root root  712 Jan  1  2017 /etc/cron.d/php
+-rwxr-xr-x 1 root root  191 Feb 22  2012 /etc/cron.hourly/fake-hwclock
+-rwxr-xr-x 1 root root  723 Dec 13  2016 /etc/cron.weekly/man-db
 
 
