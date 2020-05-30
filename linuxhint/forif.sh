@@ -2,9 +2,9 @@
 
 for (( i=1; i<11; i++ ))
 do
-        if [ $i -gt 5 ]
+        if [ $i -eq 3 ] || [ $i -eq 7 ]
         then
-                break
+            continue
         fi
         echo $i
 done
