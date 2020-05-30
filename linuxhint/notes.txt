@@ -151,4 +151,10 @@ $ ./script-input2.sh doc1.txt
 22- Debugging bash scripts
 
 ## Script output - STDOUT STDERR
+# all outputs and code in:
+$ ./script-output.sh
+# including file1.txt & file2.txt
+
+## Pipes - send output from one script to another
+
 
