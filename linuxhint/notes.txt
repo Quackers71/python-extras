@@ -165,3 +165,10 @@ The message from pipes-send script is : Hello Linux Peeple # output
 ## Numbers & Arithmetic
 # Adding numbers - output - expressions & Hex
 
+## Declare Command
+$ declare testvar=49
+$ declare -p # will show all declared variables
+# in a bash script use:
+declare -r pwdfile=/etc/passwd
+# this will make the variable readonly
+
