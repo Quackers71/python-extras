@@ -11,9 +11,8 @@ else
         read -p "Would you like to create that File? [Y/N]: " prompt
         if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" || $prompt == "YES" ]]
         then
-                echo "Creating the $directory File"
                 touch $fileName
-                #echo `ll $fileName`
+                echo "The file name: $fileName has been created"
                 exit 0
 
         elif [[ $prompt == "n" || $prompt == "N" || $prompt == "no" || $prompt == "No" || $prompt == "NO" ]]
