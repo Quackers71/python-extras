@@ -172,3 +172,24 @@ $ declare -p # will show all declared variables
 declare -r pwdfile=/etc/passwd
 # this will make the variable readonly
 
+## Sending email via Script
+# install ssmtp 
+$ sudo apt install ssmtp -y
+
+# edit ssmtp.conf:
+$ sudo vim /etc/ssmtp/ssmtp.conf
+root=iburger71@gmail.com
+mailhub=smtp.gmail.com:587
+AuthUser=iburger71@gmail.com
+AuthPass=********
+UseSTARTTLS=yes
+hostname=raspberrypi
+
+$ ./sendEmail-script.sh 
+To: iburger71@gmail.com
+From: iburger71@gmail.com
+Cc: iburger71@gmail.com
+Subject: Ras-Pi TEST
+TEST Yo
+
+
