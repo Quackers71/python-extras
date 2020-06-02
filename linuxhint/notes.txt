@@ -203,4 +203,27 @@ Cc: iburger71@gmail.com
 Subject: Ras-Pi TEST
 TEST Yo
 
+## curl in a script file
+# using a test file from http://www.ovh.net/files/
+
+$ ./curl-script.sh 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1024k  100 1024k    0     0  1174k      0 --:--:-- --:--:-- --:--:-- 1175k
+pi@raspberrypi:~/repos/python-extras/linuxhint$ ll
+total 1200
+-rw-r--r-- 1 pi pi 1048576 Jun  2 19:37 1Mio.dat
+
+# Header Information
+$ ./curl-script.sh 
+HTTP/1.1 200 OK
+Date: Tue, 02 Jun 2020 19:43:54 GMT
+Server: Apache
+Last-Modified: Thu, 16 Sep 2010 11:42:20 GMT
+ETag: "362c002-100000-4905ef050df00"
+Accept-Ranges: bytes
+Content-Length: 1048576
+Connection: close
+Content-Type: application/octet-stream
+
 
