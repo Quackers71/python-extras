@@ -124,6 +124,17 @@ pi@raspberrypi:/etc/logrotate.d $ ll /etc/cron*/*
 -rwxr-xr-x 1 root root  191 Feb 22  2012 /etc/cron.hourly/fake-hwclock
 -rwxr-xr-x 1 root root  723 Dec 13  2016 /etc/cron.weekly/man-db
 
+# Latest Output of logrotated Files
+
+$ ll -lah ~/tree*
+-rw-r--r-- 1 pi   pi    27M Jun  1 19:59 /home/pi/tree.txt
+-rw-r--r-- 1 pi   pi    17M Jun  1 06:26 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi   pi    16M May 31 06:26 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi   pi   7.3M May 30 06:25 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi   pi   5.0M May 29 19:57 /home/pi/tree.txt.4.gz
+
+
+
 ## STDIN
 # Script input - specifically read text from a file using stdin
 $ ./script-input2.sh doc1.txt
