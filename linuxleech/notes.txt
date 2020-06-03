@@ -26,4 +26,5 @@ $ sudo crontab -e # to edit the root crontab
 0       3       6       9       12      15      18      21
   1:30    4:30    7:30   10:30    13:30   16:30   19:30   22:30
 
+# /etc/crontab: system-wide crontab
 
