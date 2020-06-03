@@ -1,0 +1,13 @@
+## Linux Leech
+# https://youtu.be/ljgvo2jM234
+
+$ crontab -l
+
+*/1 * * * * tree > ~/repos/python-extras/joedel-linux/tree.txt
+# The cron will run: "At minute1." *** so every minute ***
+https://crontab.guru/#1_*_*_*_*
+
+$ crontab -e # to edit your crontab
+$ sudo crontab -e # to edit the root crontab
+
+
