@@ -65,6 +65,21 @@ compress
 notifempty
 create
 }
+
+# from 03/06/2020 my logrotate file has been changed to:
+$ cat /etc/logrotate.d/custom-tree
+/home/pi/tree.txt {
+daily
+rotate 7
+    minsize 100M
+compress
+notifempty
+create
+}
+# *** So the file is currently on 75M so it didn't logrotate at 6:26am today i.e.
+
+
+
 # You can manually run the logrotate using:
 $ sudo logrotate -f /etc/logrotate.conf
 
@@ -153,6 +168,14 @@ $ ll -lah ~/tree.txt*
 -rw-r--r-- 1 pi pi  17M Jun  1 06:26 /home/pi/tree.txt.3.gz
 -rw-r--r-- 1 pi pi  16M May 31 06:26 /home/pi/tree.txt.4.gz
 
+# Output 04/06/2020 *** Unchanged due to tree.txt being < 100M as per custom-tree file
+
+$ ll -lah ~/tree.txt*
+-rw-r--r-- 1 pi pi  75M Jun  4 20:22 /home/pi/tree.txt
+-rw-r--r-- 1 pi pi  15M Jun  3 06:26 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi pi 6.0M Jun  2 06:26 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi pi  17M Jun  1 06:26 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi pi  16M May 31 06:26 /home/pi/tree.txt.4.gz
 
 
 ## STDIN
