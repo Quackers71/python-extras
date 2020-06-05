@@ -36,6 +36,20 @@ $ cat /etc/shells
 
 # crontab -e
 */1 * * * *  /home/pi/repos/python-extras/linuxhint/./tree-cron.sh
+0 1 * * * sudo logrotate /etc/logrotate.d/custom-tree
+30 1 * * * cp ~/tree-zip.txt ~/tree.txt
+
+30 7 * * * sudo logrotate /etc/logrotate.d/custom-tree
+0 8 * * * cp ~/tree-template.txt ~/tree.txt
+
+
+# sudo crontab -e
+# m h  dom mon dow   command
+
+0 7 * * 1 sudo apt-get update -y >/del/null 2>&1
+
+
+
 # My first bash script
 $ cat tree-cron.sh 
 #!/bin/bash
@@ -69,14 +83,14 @@ create
 # from 03/06/2020 my logrotate file has been changed to:
 $ cat /etc/logrotate.d/custom-tree
 /home/pi/tree.txt {
-daily
-rotate 7
-    minsize 100M
-compress
-notifempty
-create
+    daily
+    rotate 7
+    maxsize 100M
+    compress
+    notifempty
+    create
 }
-# *** So the file is currently on 75M so it didn't logrotate at 6:26am today i.e.
+# *** Check out crontab -e above
 
 
 
@@ -90,6 +104,11 @@ $ sudo logrotate -f /etc/logrotate.conf
 * /usr/sbin/logrotate -- the logrotate command itself (the executable)
 * /etc/cron.daily/logrotate -- the shell script that runs logrotate on a daily basis (note that it might be /etc/cron.daily/logrotate.cron on some systems)
 * /etc/logrotate.conf -- the log rotation configuration file
+
+## Added this to the file:
+# use date as a suffix of the rotated file
+#dateext
+
 
 # Another important file is /etc/logrotate.d, included in the process through this line in the /etc/logrotate.conf file:
 
