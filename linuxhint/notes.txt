@@ -34,6 +34,10 @@ $ cat /etc/shells
 /bin/bash
 /bin/rbash
 
+
+## crontab && logrotate stuff
+# https://crontab.guru/examples.html
+
 # crontab -e
 */1 * * * *  /home/pi/repos/python-extras/linuxhint/./tree-cron.sh
 0 1 * * * sudo logrotate /etc/logrotate.d/custom-tree
@@ -288,4 +292,8 @@ Content-Length: 1048576
 Connection: close
 Content-Type: application/octet-stream
 
+
+## inotify-tools
+
+$ sudo apt install inotify-tools
 
