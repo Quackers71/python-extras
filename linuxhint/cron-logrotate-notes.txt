@@ -49,19 +49,23 @@ pi@raspberrypi:~/repos/python-extras/linuxhint $ crontab -l
 */15 * * * * sudo logrotate /etc/logrotate.d/custom-tree
 
 # every 30 minutes
-*/30 * * * * cat ~/tree-template.txt >> ~/tree.txt
-
-pi@raspberrypi:~/repos/python-extras/linuxhint $ ll -lah ~/tree*
--rw-r--r-- 1 pi pi 153M Jun  6 19:22 /home/pi/tree-template.txt
--rw-r--r-- 1 pi pi 153M Jun  6 23:00 /home/pi/tree.txt
--rw-r--r-- 1 pi pi  73M Jun  6 22:45 /home/pi/tree.txt.1.gz
--rw-r--r-- 1 pi pi  73M Jun  6 20:15 /home/pi/tree.txt.2.gz
--rw-r--r-- 1 pi pi  57M May 30 09:21 /home/pi/tree-zip.txt
-
+*/30 * * * * cat ~/tree-template2.txt >> ~/tree.txt
+pi@raspberrypi:~/repos/python-extras/linuxhint $ sudo cat /etc/logrotate.d/custom-tree
+/home/pi/tree.txt {
+    daily
+    rotate 14
+    maxsize 1G
+    compress
+    notifempty
+    create
+    postrotate
+        rm -f ~/tree.txt
+    endscript
+}
 pi@raspberrypi:~/repos/python-extras/linuxhint $ cat tree-cron2.sh 
 #!/bin/bash
 
-fileName=tree.txt
+fileName="tree.txt"
 
 cd ~/
 if [[ -f "$fileName" ]]
@@ -74,3 +78,14 @@ else
         touch $fileName
         cp ~/tree-template.txt ~/$fileName
 fi
+pi@raspberrypi:~/repos/python-extras/linuxhint $ ll -lah ~/tree*
+-rw-r--r-- 1 pi pi 305M Jun  7 16:42 /home/pi/tree-template2.txt
+-rw-r--r-- 1 pi pi 153M Jun  6 19:22 /home/pi/tree-template.txt
+-rw-r--r-- 1 pi pi  69K Jun  7 16:47 /home/pi/tree.txt
+-rw-r--r-- 1 pi pi 1.1G Jun  7 16:45 /home/pi/tree.txt.1
+-rw-r--r-- 1 pi pi  62M Jun  7 16:48 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi pi 128M Jun  7 16:15 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi pi 128M Jun  7 15:44 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi pi 164M Jun  7 15:00 /home/pi/tree.txt.4.gz
+-rw-r--r-- 1 pi pi  57M May 30 09:21 /home/pi/tree-zip.txt
+
