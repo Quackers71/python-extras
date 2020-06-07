@@ -1,8 +1,11 @@
 ## crontab && logrotate notes
 # https://crontab.guru/examples.html
 
+# some helpful links
 # https://stackoverflow.com/questions/52041656/log-rotate-delete-original-file-after-compressing
 # https://stackoverflow.com/questions/1034243/how-to-get-a-unix-script-to-run-every-15-seconds
+# https://linux.die.net/man/8/logrotate
+# https://stackoverflow.com/questions/20162176/centos-linux-setting-logrotate-to-maximum-file-size-for-all-logs
 
 
 pi@raspberrypi:~/repos/python-extras/linuxhint $ sudo cat /etc/logrotate.d/custom-tree
