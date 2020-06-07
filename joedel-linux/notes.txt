@@ -1,0 +1,473 @@
+# from The Complete Linux Course: Beginner to Power User!
+https://youtu.be/wBp0Rb-ZJak
+
+Joseph Delgadillo
+https://www.youtube.com/channel/UCqR4a4lUDbDkAFQnhw4pfXQ/playlists
+https://jtdigital.tech/
+
+2:24:43 The FIND command and it's practical uses
+2:36:10 GREP command explained
+2:39:10 Using GREP in conjunction with FIND
+2:42:26 Redirecting the output of a command
+2:45:42 The TOP command and its uses
+2:47:01 How to view the entire list of processes and closing applications
+2:52:36 Services explained
+2:54:44 Configuring services using the command line
+2:59:20 Using CRONTABS to schedule tasks
+
+4:42:06 Apache 2, PHP 5, and MySQL setup
+4:45:36 Server configuration
+4:51:14 Linux hosts file explained
+
+5:57:35 Adding/removing users through GUI
+6:01:09 Adding/removing users through CLI
+6:06:55 Adding users to a group
+6:10:51 Introduction to networking
+6:17:41 Local area network (LAN) explained
+6:25:08 Networking commands
+6:35:40 NETSTAT command
+6:40:39 Linux host file
+6:49:59 TRACEROUTE commands
+6:53:57 Network mapping explained
+
+
+## Find cmd
+
+$ tree
+.
+├── anewone.PHP
+├── another.php
+├── an.TXT
+├── file2.php
+├── file3.php
+├── file.php
+├── four.TXT
+├── notes.txt
+├── one.PhP
+├── somethingelse.PHP
+├── three.txt
+└── two.txt
+
+$ find . -type f -iname "*.php"
+./somethingelse.PHP
+./anewone.PHP
+./one.PhP
+./file3.php
+./another.php
+./file.php
+./file2.php
+
+$ find /etc/ -type f -iname "*.conf"
+$ find . -type f -perm 0644
+$ find . -size +1k
+
+$ find . -type f -not -iname "*.php"
+./.notes.txt.swp
+./three.txt
+./two.txt
+./an.TXT
+./four.TXT
+./notes.txt
+
+# none recursive using '-maxdepth 1' flag & arg
+$ find /etc/ -maxdepth 1  -type f -iname "*.conf"
+/etc/ld.so.conf
+/etc/nsswitch.conf
+/etc/host.conf
+/etc/mke2fs.conf
+/etc/sensors3.conf
+/etc/request-key.conf
+/etc/libaudit.conf
+/etc/pip.conf
+/etc/logrotate.conf
+/etc/paxctld.conf
+/etc/sysctl.conf
+/etc/adduser.conf
+/etc/debconf.conf
+/etc/pam.conf
+/etc/gai.conf
+/etc/resolv.conf
+/etc/rsyslog.conf
+/etc/resolvconf.conf
+/etc/ca-certificates.conf
+/etc/usb_modeswitch.conf
+/etc/ucf.conf
+/etc/dhcpcd.conf
+/etc/idmapd.conf
+/etc/fuse.conf
+/etc/deluser.conf
+
+$ sudo find /etc/ -type f -iname "*.conf" -size +50k
+/etc/fonts/infinality/conf.src/60-group-tt-fonts.conf
+/etc/fonts/infinality/conf.src/60-group-non-tt-fonts.conf
+
+## grep cmd
+
+$ grep "function" file2.php file3.php 
+file2.php:function firstfunction($do, $it, $now) {
+file2.php:function third() {
+file2.php:function listEmails($id) {
+file3.php:function nother() {
+file3.php:function finalFunc() {
+
+$ grep -n -i "function" ./*
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+
+# find and grep cmd
+$ find . -type f -iname "*.php" -exec grep -n -i "function" {} +
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+
+$ find . -type f -size -10k -name "*.php" -exec grep -n -i "function" {} +
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+
+ $ find . -type f -size -10k -iname "*.php" -exec grep -n -i "sandwich" {} + > ref.txt
+pi@raspberrypi:~/repos/python-extras/joedel-linux $ echo $?
+0
+pi@raspberrypi:~/repos/python-extras/joedel-linux $ cat ref.txt 
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+
+$ find . -type f -size -10k -iname "*.php" -exec grep -n -i "function" {} + | tee of.txt
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+$ cat of.txt
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {
+
+## Top and Processes
+
+$ top
+$ ps aux 
+$ ps aux | grep chromium-browser # Messy
+$ pgrep chromium # process id's
+$ kill -9 {pid}
+
+$ top | grep chromium
+ 1091 pi        20   0  354420  35860  20232 S   0.3  3.8   1593:54 chromium-browse             
+
+pi@raspberrypi:~/repos/python-extras/joedel-linux $ pgrep chromium-browse
+938
+957
+959
+1071
+1091
+1102
+1347
+
+$ killall chromium-browse
+
+## Services
+
+$ sudo apt-get install -y apache2
+$ ps aux | grep apache2
+root     12349  0.0  0.3   7412  3720 ?        Ss   16:32   0:00 /usr/sbin/apache2 -k start
+www-data 12350  0.0  0.3 229812  3492 ?        Sl   16:32   0:00 /usr/sbin/apache2 -k start
+www-data 12352  0.0  0.4 230916  4260 ?        Sl   16:32   0:00 /usr/sbin/apache2 -k start
+pi       12538  0.0  0.0   4372   568 pts/0    S+   16:33   0:00 grep --color=auto apache2
+
+
+udo service apache2 status
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sun 2020-05-24 16:32:11 GMT; 2min 51s ago
+ Main PID: 12349 (apache2)
+   CGroup: /system.slice/apache2.service
+           ├─12349 /usr/sbin/apache2 -k start
+           ├─12350 /usr/sbin/apache2 -k start
+           └─12352 /usr/sbin/apache2 -k start
+
+May 24 16:32:11 raspberrypi systemd[1]: Starting The Apache HTTP Server...
+May 24 16:32:11 raspberrypi apachectl[12338]: AH00558: apache2: Could not reliably determine the
+May 24 16:32:11 raspberrypi systemd[1]: Started The Apache HTTP Server.
+
+$ vim /etc/apache2/ports.conf
+# changed from 'Listen 80' to 'Listen 8080'
+# However use systemctl as it is the new standard i.e.
+$ sudo systemctl status apache2
+$ sudo systemctl restart apache2
+
+
+## crontabs
+
+# Use https://crontab.guru/
+
+$ sudo crontab -e
+
+0 7 * * 1 sudo apt-get update -y >/dev/null 2>&1
+
+# The cron will run from:
+2020-06-01 07:00:00 UTC
+2020-06-08 07:00:00 UTC
+2020-06-15 07:00:00 UTC
+2020-06-22 07:00:00 UTC
+2020-06-29 07:00:00 UTC
+
+$ crontab -e
+
+# */1 * * * * tree > ~/repos/python-extras/joedel-linux/tree.txt
+
+
+## apache2 - Lamp Stack
+
+$ sudo apt-get install apache2 php5 mysql-server
+# Had to re-install php and received:
+$ sudo apt-get install php
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libapache2-mod-php7.0 php-common php7.0 php7.0-cli php7.0-common php7.0-json php7.0-opcache
+  php7.0-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php7.0 php php-common php7.0 php7.0-cli php7.0-common php7.0-json
+  php7.0-opcache php7.0-readline
+
+# packages now installed ;-)
+pi@raspberrypi: $ php -v
+PHP 7.0.33-0+deb9u7 (cli) (built: Feb 16 2020 15:11:40) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.0.0, Copyright (c) 1998-2017 Zend Technologies
+    with Zend OPcache v7.0.33-0+deb9u7, Copyright (c) 1999-2017, by Zend Technologies
+$ apache2 -v
+Server version: Apache/2.4.25 (Raspbian)
+Server built:   2019-10-13T15:43:54
+$ mysql --version
+mysql  Ver 15.1 Distrib 10.1.44-MariaDB, for debian-linux-gnueabihf (armv7l) using readline 5.2
+pi
+
+$ sudo chown pi:pi -R /var/www/
+$ sudo vim /etc/apache2/envvars
+# change stuff to:
+export APACHE_RUN_USER=pi
+export APACHE_RUN_GROUP=pi
+
+# renamed /var/www/html/index.html to .old
+$ vim /var/www/html/index.php
+
+<?php
+phpinfo();
+?>
+
+$ sudo systemctl restart apache2
+# See phpinfo() page in Chromium i.e.
+http://localhost:8080/index.php
+
+# removed port 8080
+# added entry to /etc/hosts
+127.0.1.1	quackers.ninja
+# now this URL .html or .php file in /var/www/html/ dir
+
+https://www.guru99.com/php-vs-javascript.html
+
+## Networking Commands
+
+$ ping www.google.co.uk
+$ ifconfig
+$ sudo apt-get install tcpdump -y
+
+$  sudo tcpdump -c 10
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wlan0, link-type EN10MB (Ethernet), capture size 262144 bytes
+20:26:38.463483 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 3901734583:3901736043, ack 181331170, win 61104, length 1460
+20:26:38.463641 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 1460:2920, ack 1, win 61104, length 1460
+20:26:38.465770 IP 192.168.1.28.51506 > 192.168.1.1.domain: 20312+ PTR? 28.1.168.192.in-addr.arpa. (43)
+20:26:38.467128 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 2920:4380, ack 1, win 61104, length 1460
+20:26:38.467167 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 4380:5840, ack 1, win 61104, length 1460
+20:26:38.467574 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 5840:7300, ack 1, win 61104, length 1460
+20:26:38.467741 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 7300:8760, ack 1, win 61104, length 1460
+20:26:38.507992 IP 192.168.1.28.38785 > 192.168.1.1.domain: 38199+ PTR? 1.1.168.192.in-addr.arpa. (42)
+20:26:38.523037 IP 192.168.1.1.domain > 192.168.1.28.38785: 38199 NXDomain 0/1/0 (91)
+20:26:38.767635 IP 192.168.1.28.5900 > 192.168.1.25.55531: Flags [.], seq 30751:32211, ack 11, win 61104, length 1460
+10 packets captured
+44 packets received by filter
+32 packets dropped by kernel
+
+# Capture Packets in ASCII
+$ sudo tcpdump -c 5 -A
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wlan0, link-type EN10MB (Ethernet), capture size 262144 bytes
+20:28:08.270350 ARP, Request who-has 192.168.1.225 tell 192.168.1.1, length 28
+........ .*.#...............
+20:28:08.273001 IP 192.168.1.28.52850 > 192.168.1.1.domain: 61412+ PTR? 225.1.168.192.in-addr.arpa. (44)
+E..H.L@.@............r.5.4...............225.1.168.192.in-addr.arpa.....
+20:28:08.289258 IP 192.168.1.1.domain > 192.168.1.28.52850: 61412 NXDomain 0/1/0 (93)
+E..y..@.@............5.r.e[..............225.1.168.192.in-addr.arpa................%	localhost..root......	:...Q..$...	:.
+20:28:08.290987 IP 192.168.1.28.49051 > 192.168.1.1.domain: 65036+ PTR? 1.1.168.192.in-addr.arpa. (42)
+E..F.N@.@..............5.21..............1.1.168.192.in-addr.arpa.....
+20:28:08.307073 IP 192.168.1.1.domain > 192.168.1.28.49051: 65036 NXDomain 0/1/0 (91)
+E..w..@.@............5...c...............1.1.168.192.in-addr.arpa................%	localhost..root......	:...Q..$...	:.
+5 packets captured
+7 packets received by filter
+0 packets dropped by kernel
+
+# Check out files I have output too i.e. wlan0.txt
+
+$ sudo tcpdump -i wlan0 port 22
+
+## Netstat
+
+# numeric & routing table
+$ netstat -nr
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG        0 0          0 wlan0
+192.168.1.0     0.0.0.0         255.255.255.0   U         0 0          0 wlan0
+
+# interface table
+$ netstat -i
+Kernel Interface table
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+eth0      1500        0      0      0 0             0      0      0      0 BMU
+lo       65536      513      0      0 0           513      0      0      0 LRU
+wlan0     1500  2431605      0      0 0       3075199      0      0      0 BMRU
+
+# tcp & all sockets
+$ netstat -ta
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:mysql         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:5900            0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:36656         localhost:42743         ESTABLISHED
+tcp        0      0 192.168.1.28:5900       192.168.1.90:54723      ESTABLISHED
+tcp        0      0 localhost:42743         localhost:36656         ESTABLISHED
+tcp6       0      0 localhost:ipp           [::]:*                  LISTEN     
+tcp6       0      0 [::]:5900               [::]:*                  LISTEN     
+tcp6       0      0 [::]:http               [::]:*                  LISTEN 
+
+# numeric, tcp & all sockets
+$ netstat -tan > netstat-tcp-all-num.txt
+
+# added
+104.22.34.105	jojopi
+
+#to the /etc/hosts file
+# However, the website purple.com has cloudflare sat infront of it!
+
+# How to change the hostname ;-)
+$ sudo hostnamectl set-hostname qpi
+$ sudo vim /etc/hosts
+sudo: unable to resolve host qpi
+$ sudo systemctl restart hostname
+Failed to restart hostname.service: Unit hostname.service is masked.
+$ hostname
+qpi
+
+## traceroute
+# sudo apt-get install traceroute -y
+
+$ traceroute google.co.uk
+traceroute to google.co.uk (216.58.206.99), 30 hops max, 60 byte packets
+ 1  192.168.1.1 (192.168.1.1)  2.832 ms  2.866 ms  3.235 ms
+ 2  * * *
+ 3  * * *
+ 4  213.121.98.144 (213.121.98.144)  23.599 ms  25.055 ms  25.895 ms
+ 5  87.237.20.134 (87.237.20.134)  41.880 ms  42.205 ms  42.296 ms
+ 6  74.125.52.218 (74.125.52.218)  31.649 ms  17.571 ms  22.074 ms
+ 7  * * *
+ 8  64.233.175.90 (64.233.175.90)  24.567 ms 108.170.232.96 (108.170.232.96)  27.034 ms 172.253.65.210 (172.253.65.210)  19.868 ms
+ 9  74.125.242.82 (74.125.242.82)  20.042 ms 216.239.58.221 (216.239.58.221)  22.712 ms 74.125.242.115 (74.125.242.115)  20.661 ms
+10  lhr25s14-in-f3.1e100.net (216.58.206.99)  16.796 ms 209.85.250.185 (209.85.250.185)  17.949 ms 209.85.241.211 (209.85.241.211)  18.027 ms
+
+$ traceroute ec2-35-177-35-250.eu-west-2.compute.amazonaws.com > myEC2AWSserver.txt
+# See Output File
+
+## using nmap
+
+$ nmap 192.168.1.13
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-26 20:32 GMT
+Nmap scan report for 192.168.1.13
+Host is up (0.016s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE
+9080/tcp  open  glrpc
+62078/tcp open  iphone-sync
+
+Nmap done: 1 IP address (1 host up) scanned in 44.02 seconds
+
+# further output seen with files starting with nmap-?????-???.txt
+
+$ nmap ec2-35-177-35-250.eu-west-2.compute.amazonaws.com
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-27 08:11 GMT
+Nmap scan report for ec2-35-177-35-250.eu-west-2.compute.amazonaws.com (35.177.35.250)
+Host is up (0.020s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+80/tcp  open   http
+443/tcp closed https
+
+Nmap done: 1 IP address (1 host up) scanned in 7.16 seconds
+
+# This will scan hosts and ip's from the networks.txt file
+$ nmap -iL networks.txt
+
+$ nmap -iL networks.txt > nmap-networks-output.txt
+$ nmap -AiL networks.txt > nmap-networks-os-output.txt
+$ nmap -sP 192.168.1.0/24 > currentConnectedHosts.txt
+
+$ sudo nmap -O 192.168.1.7
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-27 08:54 GMT
+Nmap scan report for 192.168.1.7
+Host is up (0.016s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+1443/tcp open  ies-lm
+7000/tcp open  afs3-fileserver
+MAC Address: 78:28:CA:B1:7C:0E (Sonos)
+Device type: general purpose
+Running: Linux 3.X
+OS CPE: cpe:/o:linux:linux_kernel:3
+OS details: Linux 3.2 - 3.10, Linux 3.2 - 3.16
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.20 seconds
+
+

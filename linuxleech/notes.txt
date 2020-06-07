@@ -1,0 +1,30 @@
+## Linux Leech
+# https://youtu.be/ljgvo2jM234
+
+$ crontab -l
+
+*/1 * * * * tree > ~/repos/python-extras/joedel-linux/tree.txt
+# The cron will run: "At minute1." *** so every minute ***
+https://crontab.guru/#1_*_*_*_*
+
+$ crontab -e # to edit your crontab
+$ sudo crontab -e # to edit the root crontab
+
+## Other examples of cron schedules
+# 23:30 on the last day of every month
+
+# m h  dom mon dow   command
+30 23 28-31 * * test $(date -d tomorrow +%d) -eq 1 && ~/yourscript.sh
+
+# Every 90 minutes
+
+# m h  dom mon dow   command
+0 */3 * * * 
+30 1/3 * * *
+
+# So this will run at:
+0       3       6       9       12      15      18      21
+  1:30    4:30    7:30   10:30    13:30   16:30   19:30   22:30
+
+# /etc/crontab: system-wide crontab
+

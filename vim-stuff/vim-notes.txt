@@ -1,0 +1,16 @@
+## Super Notes on setting up .vimrc and more...
+# from: https://www.youtube.com/watch?v=n9k9scbTuvQ
+
+: source % # to implement changes to the source code
+
+$ mkdir ~/.vim/undodir -p
+$ sudo vim ~/.vimrc
+# see file .vimrc
+
+# install YouCompleteMe
+$ cd ~/.vim/plugged/YouCompleteMe/
+$ ./install.py --ts-completer
+
+# if required: $ sudo apt-get install cmake -y
+
+# Didn't work but will come back to this at some point!

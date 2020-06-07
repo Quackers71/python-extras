@@ -1,0 +1,686 @@
+.
+├── 2018-03-02-215437_1824x984_scrot.png
+├── 2018-03-02-215633_1824x984_scrot.png
+├── Desktop
+├── Documents
+│   ├── BlueJ Projects
+│   │   ├── appletdemo
+│   │   │   ├── CaseConverter.java
+│   │   │   ├── package.bluej
+│   │   │   └── README.TXT
+│   │   ├── debugdemo
+│   │   │   ├── Car.java
+│   │   │   ├── Demo.java
+│   │   │   ├── package.bluej
+│   │   │   └── README.TXT
+│   │   ├── file-reader
+│   │   │   ├── FileReader.java
+│   │   │   ├── package.bluej
+│   │   │   ├── README.TXT
+│   │   │   └── test.txt
+│   │   ├── hello
+│   │   │   ├── Hello.java
+│   │   │   ├── package.bluej
+│   │   │   └── README.TXT
+│   │   ├── LED-Button
+│   │   │   ├── Button.ctxt
+│   │   │   ├── Button.java
+│   │   │   ├── LED.ctxt
+│   │   │   ├── LED.java
+│   │   │   ├── LEDTester.ctxt
+│   │   │   ├── LEDTester.java
+│   │   │   ├── package.bluej
+│   │   │   ├── README.TXT
+│   │   │   ├── StringToMorse.ctxt
+│   │   │   └── StringToMorse.java
+│   │   ├── LICENSE.txt
+│   │   ├── people
+│   │   │   ├── Database.class
+│   │   │   ├── Database.ctxt
+│   │   │   ├── Database.java
+│   │   │   ├── package.bluej
+│   │   │   ├── Person.class
+│   │   │   ├── Person.ctxt
+│   │   │   ├── Person.java
+│   │   │   ├── README.TXT
+│   │   │   ├── Staff.class
+│   │   │   ├── Staff.ctxt
+│   │   │   ├── Staff.java
+│   │   │   ├── Student.class
+│   │   │   ├── Student.ctxt
+│   │   │   └── Student.java
+│   │   ├── people2
+│   │   │   ├── Address.java
+│   │   │   ├── Database.java
+│   │   │   ├── package.bluej
+│   │   │   ├── Person.java
+│   │   │   ├── README.TXT
+│   │   │   ├── Staff.java
+│   │   │   └── Student.java
+│   │   ├── picture
+│   │   │   ├── Canvas.java
+│   │   │   ├── Circle.java
+│   │   │   ├── package.bluej
+│   │   │   ├── Picture.java
+│   │   │   ├── README.TXT
+│   │   │   ├── Square.java
+│   │   │   └── Triangle.java
+│   │   ├── README.TXT
+│   │   ├── shapes
+│   │   │   ├── Canvas.java
+│   │   │   ├── Circle.java
+│   │   │   ├── package.bluej
+│   │   │   ├── README.TXT
+│   │   │   ├── Square.java
+│   │   │   └── Triangle.java
+│   │   └── THIRDPARTYLICENSE.txt
+│   ├── Greenfoot Projects
+│   │   ├── API
+│   │   │   ├── allclasses-frame.html
+│   │   │   ├── allclasses-noframe.html
+│   │   │   ├── constant-values.html
+│   │   │   ├── deprecated-list.html
+│   │   │   ├── greenfoot
+│   │   │   │   ├── Actor.html
+│   │   │   │   ├── Greenfoot.html
+│   │   │   │   ├── GreenfootImage.html
+│   │   │   │   ├── GreenfootSound.html
+│   │   │   │   ├── MouseInfo.html
+│   │   │   │   ├── package-frame.html
+│   │   │   │   ├── package-summary.html
+│   │   │   │   ├── package-tree.html
+│   │   │   │   ├── UserInfo.html
+│   │   │   │   └── World.html
+│   │   │   ├── help-doc.html
+│   │   │   ├── index-all.html
+│   │   │   ├── index.html
+│   │   │   ├── overview-tree.html
+│   │   │   ├── package-list
+│   │   │   ├── resources
+│   │   │   │   ├── background.gif
+│   │   │   │   ├── tab.gif
+│   │   │   │   ├── titlebar_end.gif
+│   │   │   │   └── titlebar.gif
+│   │   │   └── stylesheet.css
+│   │   ├── GREENFOOT_LICENSES.txt
+│   │   ├── LICENSE.txt
+│   │   ├── README.txt
+│   │   ├── scenarios
+│   │   │   ├── ants
+│   │   │   │   ├── AntHill.java
+│   │   │   │   ├── Ant.java
+│   │   │   │   ├── AntWorld.java
+│   │   │   │   ├── Counter.java
+│   │   │   │   ├── Creature.java
+│   │   │   │   ├── Food.java
+│   │   │   │   ├── images
+│   │   │   │   │   ├── ant.gif
+│   │   │   │   │   ├── anthill.png
+│   │   │   │   │   ├── ant-with-food.gif
+│   │   │   │   │   ├── Counter.png
+│   │   │   │   │   ├── Food.png
+│   │   │   │   │   ├── Pheromone.png
+│   │   │   │   │   └── sand.jpg
+│   │   │   │   ├── Pheromone.java
+│   │   │   │   ├── project.greenfoot
+│   │   │   │   ├── README.TXT
+│   │   │   │   └── sounds
+│   │   │   ├── LTA
+│   │   │   │   ├── Car.java
+│   │   │   │   ├── Ground.java
+│   │   │   │   ├── images
+│   │   │   │   │   ├── car01.png
+│   │   │   │   │   ├── ground2.png
+│   │   │   │   │   └── ground.png
+│   │   │   │   ├── project.greenfoot
+│   │   │   │   ├── README.TXT
+│   │   │   │   └── sounds
+│   │   │   └── lunarlander
+│   │   │       ├── Explosion.java
+│   │   │       ├── Flag.java
+│   │   │       ├── images
+│   │   │       │   ├── explosion.png
+│   │   │       │   ├── flag.png
+│   │   │       │   ├── moon.jpg
+│   │   │       │   ├── rocket.png
+│   │   │       │   └── thrust.png
+│   │   │       ├── Lander.java
+│   │   │       ├── Moon.java
+│   │   │       ├── project.greenfoot
+│   │   │       ├── README.TXT
+│   │   │       └── sounds
+│   │   │           └── Explosion.wav
+│   │   ├── THIRDPARTYLICENSE.txt
+│   │   └── tutorial
+│   │       ├── tutorial-files
+│   │       │   ├── decor2-1.jpg
+│   │       │   ├── greenfoot.jpg
+│   │       │   ├── kent.png
+│   │       │   ├── tutorial.css
+│   │       │   ├── wombat-menu.png
+│   │       │   └── wombats.png
+│   │       └── tutorial.html
+│   └── Scratch Projects
+│       ├── Asteroid Blaster.sb
+│       ├── Pacman for Scratch.sb
+│       └── Scratch Invaders.sb
+├── Downloads
+│   ├── google-chrome-stable_current_amd64.deb
+│   └── VNC-Server-6.2.1-Linux-x86.deb
+├── Music
+├── Pictures
+├── Public
+├── python_games
+│   ├── 4row_arrow.png
+│   ├── 4row_black.png
+│   ├── 4row_board.png
+│   ├── 4row_computerwinner.png
+│   ├── 4row_humanwinner.png
+│   ├── 4row_red.png
+│   ├── 4row_tie.png
+│   ├── badswap.wav
+│   ├── beep1.ogg
+│   ├── beep2.ogg
+│   ├── beep3.ogg
+│   ├── beep4.ogg
+│   ├── blankpygame.py
+│   ├── boy.png
+│   ├── catanimation.py
+│   ├── catgirl.png
+│   ├── cat.png
+│   ├── drawing.py
+│   ├── flippybackground.png
+│   ├── flippyboard.png
+│   ├── flippy.py
+│   ├── fourinarow.py
+│   ├── gameicon.png
+│   ├── gem1.png
+│   ├── gem2.png
+│   ├── gem3.png
+│   ├── gem4.png
+│   ├── gem5.png
+│   ├── gem6.png
+│   ├── gem7.png
+│   ├── gemgem.py
+│   ├── grass1.png
+│   ├── grass2.png
+│   ├── grass3.png
+│   ├── grass4.png
+│   ├── Grass_Block.png
+│   ├── horngirl.png
+│   ├── inkspilllogo.png
+│   ├── inkspill.py
+│   ├── inkspillresetbutton.png
+│   ├── inkspillsettingsbutton.png
+│   ├── inkspillsettings.png
+│   ├── inkspillspot.png
+│   ├── launcher.sh
+│   ├── match0.wav
+│   ├── match1.wav
+│   ├── match2.wav
+│   ├── match3.wav
+│   ├── match4.wav
+│   ├── match5.wav
+│   ├── memorypuzzle_obfuscated.py
+│   ├── memorypuzzle.py
+│   ├── pentomino.py
+│   ├── pinkgirl.png
+│   ├── Plain_Block.png
+│   ├── princess.png
+│   ├── RedSelector.png
+│   ├── Rock.png
+│   ├── Selector.png
+│   ├── simulate.py
+│   ├── slidepuzzle.py
+│   ├── squirrel.png
+│   ├── squirrel.py
+│   ├── Star.png
+│   ├── starPusherLevels.txt
+│   ├── starpusher.py
+│   ├── star_solved.png
+│   ├── star_title.png
+│   ├── tetrisb.mid
+│   ├── tetrisc.mid
+│   ├── tetrominoforidiots.py
+│   ├── tetromino.py
+│   ├── Tree_Short.png
+│   ├── Tree_Tall.png
+│   ├── Tree_Ugly.png
+│   ├── Wall_Block_Tall.png
+│   ├── Wood_Block_Tall.png
+│   └── wormy.py
+├── q
+│   └── gamkedo
+│       ├── Game
+│       └── Tennis
+│           ├── app-code.js
+│           └── game.html
+├── repos
+│   ├── python-extras
+│   │   ├── edabit
+│   │   │   ├── edabit-challenges.txt
+│   │   │   ├── filterOutStr.py
+│   │   │   ├── findMissingnum.py
+│   │   │   ├── peepsBudget.py
+│   │   │   └── westernShowdown.py
+│   │   ├── joedel-linux
+│   │   │   ├── anewone.PHP
+│   │   │   ├── another.php
+│   │   │   ├── an.TXT
+│   │   │   ├── file2.php
+│   │   │   ├── file3.php
+│   │   │   ├── file.php
+│   │   │   ├── four.TXT
+│   │   │   ├── notes.txt
+│   │   │   ├── of.txt
+│   │   │   ├── one.PhP
+│   │   │   ├── output.txt
+│   │   │   ├── raspberrypi-chromium-Apache2.jpg
+│   │   │   ├── ref.txt
+│   │   │   ├── somethingelse.PHP
+│   │   │   ├── three.txt
+│   │   │   ├── tree.txt
+│   │   │   └── two.txt
+│   │   ├── missingsemester
+│   │   │   └── shell
+│   │   │       ├── bar
+│   │   │       │   ├── a
+│   │   │       │   ├── b
+│   │   │       │   ├── c
+│   │   │       │   ├── d
+│   │   │       │   ├── e
+│   │   │       │   ├── f
+│   │   │       │   ├── g
+│   │   │       │   ├── h
+│   │   │       │   ├── i
+│   │   │       │   ├── j
+│   │   │       │   └── y
+│   │   │       ├── example.sh
+│   │   │       ├── foo
+│   │   │       │   ├── a
+│   │   │       │   ├── b
+│   │   │       │   ├── c
+│   │   │       │   ├── d
+│   │   │       │   ├── e
+│   │   │       │   ├── f
+│   │   │       │   ├── g
+│   │   │       │   ├── h
+│   │   │       │   ├── i
+│   │   │       │   ├── j
+│   │   │       │   └── x
+│   │   │       ├── foo1
+│   │   │       ├── foo10
+│   │   │       ├── foo2
+│   │   │       ├── image.png
+│   │   │       ├── Kylie and Lily.jpg
+│   │   │       ├── mcd.sh
+│   │   │       ├── notes.txt
+│   │   │       ├── project1
+│   │   │       │   └── src
+│   │   │       │       └── test
+│   │   │       │           ├── test1.py
+│   │   │       │           ├── test2.py
+│   │   │       │           └── test3.py
+│   │   │       ├── project2
+│   │   │       │   └── src
+│   │   │       │       └── test
+│   │   │       │           ├── test1.py
+│   │   │       │           ├── test2.py
+│   │   │       │           └── test3.py
+│   │   │       ├── script.py
+│   │   │       ├── test.sh
+│   │   │       ├── ThePebble.jpg
+│   │   │       └── ThePebble.png
+│   │   ├── README.md
+│   │   ├── socratica
+│   │   │   ├── fibonacci2.py
+│   │   │   ├── fibonacci3.py
+│   │   │   ├── fibonacci4.py
+│   │   │   └── fibonacci.py
+│   │   └── techwit
+│   │       ├── Flask
+│   │       │   └── app.py
+│   │       ├── Intermediate Python Tutorials
+│   │       │   ├── map_function.py
+│   │       │   ├── optional_parameters_car.py
+│   │       │   ├── optional_parameters.py
+│   │       │   └── static_and_class_methods.py
+│   │       ├── Pygame firstGame
+│   │       │   ├── bg.jpg
+│   │       │   ├── bullet.wav
+│   │       │   ├── firstGame.py
+│   │       │   ├── hit.wav
+│   │       │   ├── L10E.png
+│   │       │   ├── L11E.png
+│   │       │   ├── L1E.png
+│   │       │   ├── L1.png
+│   │       │   ├── L2E.png
+│   │       │   ├── L2.png
+│   │       │   ├── L3E.png
+│   │       │   ├── L3.png
+│   │       │   ├── L4E.png
+│   │       │   ├── L4.png
+│   │       │   ├── L5E.png
+│   │       │   ├── L5.png
+│   │       │   ├── L6E.png
+│   │       │   ├── L6.png
+│   │       │   ├── L7E.png
+│   │       │   ├── L7.png
+│   │       │   ├── L8E.png
+│   │       │   ├── L8.png
+│   │       │   ├── L9E.png
+│   │       │   ├── L9.png
+│   │       │   ├── music.mp3
+│   │       │   ├── music.wav
+│   │       │   ├── R10E.png
+│   │       │   ├── R11E.png
+│   │       │   ├── R1E.png
+│   │       │   ├── R1.png
+│   │       │   ├── R2E.png
+│   │       │   ├── R2.png
+│   │       │   ├── R3E.png
+│   │       │   ├── R3.png
+│   │       │   ├── R4E.png
+│   │       │   ├── R4.png
+│   │       │   ├── R5E.png
+│   │       │   ├── R5.png
+│   │       │   ├── R6E.png
+│   │       │   ├── R6.png
+│   │       │   ├── R7E.png
+│   │       │   ├── R7.png
+│   │       │   ├── R8E.png
+│   │       │   ├── R8.png
+│   │       │   ├── R9E.png
+│   │       │   ├── R9.png
+│   │       │   └── standing.png
+│   │       ├── Pygame Space Invaders
+│   │       │   ├── assets
+│   │       │   │   ├── background-black.png
+│   │       │   │   ├── pixel_laser_blue.png
+│   │       │   │   ├── pixel_laser_green.png
+│   │       │   │   ├── pixel_laser_purple.png
+│   │       │   │   ├── pixel_laser_red.png
+│   │       │   │   ├── pixel_laser_yellow.png
+│   │       │   │   ├── pixel_ship_blue_small.png
+│   │       │   │   ├── pixel_ship_green_small.png
+│   │       │   │   ├── pixel_ship_purple_small.png
+│   │       │   │   ├── pixel_ship_red_small.png
+│   │       │   │   └── pixel_ship_yellow.png
+│   │       │   └── main.py
+│   │       ├── Python OOP Tutorials
+│   │       │   ├── mod.py
+│   │       │   ├── __pycache__
+│   │       │   │   └── mod.cpython-38.pyc
+│   │       │   ├── tutorial2.py
+│   │       │   ├── tutorial3.py
+│   │       │   ├── tutorial4.py
+│   │       │   ├── tutorial5.py
+│   │       │   ├── tutorial6.py
+│   │       │   ├── tutorial.py
+│   │       │   └── Vehicle.py
+│   │       └── Selenium
+│   │           ├── app1.py
+│   │           ├── app2.py
+│   │           ├── app3.py
+│   │           ├── app4.py
+│   │           ├── debug.log
+│   │           ├── seleniumNotes.txt
+│   │           └── testcase
+│   │               ├── element.py
+│   │               ├── locator.py
+│   │               ├── main.py
+│   │               ├── output.txt
+│   │               ├── page.py
+│   │               └── __pycache__
+│   │                   ├── element.cpython-38.pyc
+│   │                   ├── locator.cpython-38.pyc
+│   │                   └── page.cpython-38.pyc
+│   └── ripgrep
+│       ├── benchsuite
+│       │   ├── benchsuite
+│       │   └── runs
+│       │       ├── 2016-09-17-ubuntu1604-ec2
+│       │       │   ├── raw.csv
+│       │       │   ├── README.SETUP
+│       │       │   └── summary
+│       │       ├── 2016-09-20-ubuntu1604-ec2
+│       │       │   ├── raw.csv
+│       │       │   ├── README.SETUP
+│       │       │   └── summary
+│       │       ├── 2016-09-22-archlinux-cheetah
+│       │       │   ├── raw.csv
+│       │       │   └── summary
+│       │       ├── 2016-12-24-archlinux-cheetah
+│       │       │   ├── raw.csv
+│       │       │   └── summary
+│       │       ├── 2016-12-24-archlinux-cheetah-glibc-jemalloc
+│       │       │   ├── raw.csv
+│       │       │   └── summary
+│       │       ├── 2016-12-24-archlinux-cheetah-glibc-system
+│       │       │   ├── raw.csv
+│       │       │   └── summary
+│       │       ├── 2016-12-24-archlinux-cheetah-musl-jemalloc
+│       │       │   ├── raw.csv
+│       │       │   └── summary
+│       │       ├── 2016-12-24-archlinux-cheetah-musl-system
+│       │       │   ├── raw.csv
+│       │       │   └── summary
+│       │       ├── 2016-12-30-archlinux-cheetah
+│       │       │   ├── raw.csv
+│       │       │   └── summary
+│       │       └── 2018-01-08-archlinux-cheetah
+│       │           ├── raw.csv
+│       │           ├── README
+│       │           └── summary
+│       ├── build.rs
+│       ├── Cargo.lock
+│       ├── Cargo.toml
+│       ├── CHANGELOG.md
+│       ├── ci
+│       │   ├── build-deb
+│       │   ├── cargo-out-dir
+│       │   ├── docker
+│       │   │   ├── arm-unknown-linux-gnueabihf
+│       │   │   │   ├── build
+│       │   │   │   └── Dockerfile
+│       │   │   ├── i686-unknown-linux-gnu
+│       │   │   │   ├── build
+│       │   │   │   └── Dockerfile
+│       │   │   ├── mips64-unknown-linux-gnuabi64
+│       │   │   │   ├── build
+│       │   │   │   └── Dockerfile
+│       │   │   ├── README.md
+│       │   │   └── x86_64-unknown-linux-musl
+│       │   │       ├── build
+│       │   │       └── Dockerfile
+│       │   ├── macos-install-packages
+│       │   ├── sha256-releases
+│       │   ├── test-complete
+│       │   ├── ubuntu-install-packages
+│       │   └── utils.sh
+│       ├── complete
+│       │   └── _rg
+│       ├── COPYING
+│       ├── crates
+│       │   ├── cli
+│       │   │   ├── Cargo.toml
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   ├── decompress.rs
+│       │   │   │   ├── escape.rs
+│       │   │   │   ├── human.rs
+│       │   │   │   ├── lib.rs
+│       │   │   │   ├── pattern.rs
+│       │   │   │   ├── process.rs
+│       │   │   │   └── wtr.rs
+│       │   │   └── UNLICENSE
+│       │   ├── core
+│       │   │   ├── app.rs
+│       │   │   ├── args.rs
+│       │   │   ├── config.rs
+│       │   │   ├── logger.rs
+│       │   │   ├── main.rs
+│       │   │   ├── messages.rs
+│       │   │   ├── path_printer.rs
+│       │   │   ├── README.md
+│       │   │   ├── search.rs
+│       │   │   └── subject.rs
+│       │   ├── globset
+│       │   │   ├── benches
+│       │   │   │   └── bench.rs
+│       │   │   ├── Cargo.toml
+│       │   │   ├── COPYING
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   ├── glob.rs
+│       │   │   │   ├── lib.rs
+│       │   │   │   ├── pathutil.rs
+│       │   │   │   └── serde_impl.rs
+│       │   │   └── UNLICENSE
+│       │   ├── grep
+│       │   │   ├── Cargo.toml
+│       │   │   ├── COPYING
+│       │   │   ├── examples
+│       │   │   │   └── simplegrep.rs
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   └── lib.rs
+│       │   │   └── UNLICENSE
+│       │   ├── ignore
+│       │   │   ├── Cargo.toml
+│       │   │   ├── COPYING
+│       │   │   ├── examples
+│       │   │   │   └── walk.rs
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   ├── default_types.rs
+│       │   │   │   ├── dir.rs
+│       │   │   │   ├── gitignore.rs
+│       │   │   │   ├── lib.rs
+│       │   │   │   ├── overrides.rs
+│       │   │   │   ├── pathutil.rs
+│       │   │   │   ├── types.rs
+│       │   │   │   └── walk.rs
+│       │   │   ├── tests
+│       │   │   │   ├── gitignore_matched_path_or_any_parents_tests.gitignore
+│       │   │   │   └── gitignore_matched_path_or_any_parents_tests.rs
+│       │   │   └── UNLICENSE
+│       │   ├── matcher
+│       │   │   ├── Cargo.toml
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   ├── interpolate.rs
+│       │   │   │   └── lib.rs
+│       │   │   ├── tests
+│       │   │   │   ├── test_matcher.rs
+│       │   │   │   ├── tests.rs
+│       │   │   │   └── util.rs
+│       │   │   └── UNLICENSE
+│       │   ├── pcre2
+│       │   │   ├── Cargo.toml
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   ├── error.rs
+│       │   │   │   ├── lib.rs
+│       │   │   │   └── matcher.rs
+│       │   │   └── UNLICENSE
+│       │   ├── printer
+│       │   │   ├── Cargo.toml
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   ├── color.rs
+│       │   │   │   ├── counter.rs
+│       │   │   │   ├── json.rs
+│       │   │   │   ├── jsont.rs
+│       │   │   │   ├── lib.rs
+│       │   │   │   ├── macros.rs
+│       │   │   │   ├── standard.rs
+│       │   │   │   ├── stats.rs
+│       │   │   │   ├── summary.rs
+│       │   │   │   └── util.rs
+│       │   │   └── UNLICENSE
+│       │   ├── regex
+│       │   │   ├── Cargo.toml
+│       │   │   ├── LICENSE-MIT
+│       │   │   ├── README.md
+│       │   │   ├── src
+│       │   │   │   ├── ast.rs
+│       │   │   │   ├── config.rs
+│       │   │   │   ├── crlf.rs
+│       │   │   │   ├── error.rs
+│       │   │   │   ├── lib.rs
+│       │   │   │   ├── literal.rs
+│       │   │   │   ├── matcher.rs
+│       │   │   │   ├── multi.rs
+│       │   │   │   ├── non_matching.rs
+│       │   │   │   ├── strip.rs
+│       │   │   │   ├── util.rs
+│       │   │   │   └── word.rs
+│       │   │   └── UNLICENSE
+│       │   └── searcher
+│       │       ├── Cargo.toml
+│       │       ├── examples
+│       │       │   └── search-stdin.rs
+│       │       ├── LICENSE-MIT
+│       │       ├── README.md
+│       │       ├── src
+│       │       │   ├── lib.rs
+│       │       │   ├── line_buffer.rs
+│       │       │   ├── lines.rs
+│       │       │   ├── macros.rs
+│       │       │   ├── searcher
+│       │       │   │   ├── core.rs
+│       │       │   │   ├── glue.rs
+│       │       │   │   ├── mmap.rs
+│       │       │   │   └── mod.rs
+│       │       │   ├── sink.rs
+│       │       │   └── testutil.rs
+│       │       └── UNLICENSE
+│       ├── Cross.toml
+│       ├── doc
+│       │   └── rg.1.txt.tpl
+│       ├── FAQ.md
+│       ├── GUIDE.md
+│       ├── HomebrewFormula -> pkg/brew
+│       ├── LICENSE-MIT
+│       ├── pkg
+│       │   └── brew
+│       │       └── ripgrep-bin.rb
+│       ├── README.md
+│       ├── RELEASE-CHECKLIST.md
+│       ├── rustfmt.toml
+│       ├── scripts
+│       │   └── copy-examples
+│       ├── tests
+│       │   ├── binary.rs
+│       │   ├── data
+│       │   │   ├── sherlock.br
+│       │   │   ├── sherlock.bz2
+│       │   │   ├── sherlock.gz
+│       │   │   ├── sherlock.lz4
+│       │   │   ├── sherlock.lzma
+│       │   │   ├── sherlock-nul.txt
+│       │   │   ├── sherlock.xz
+│       │   │   ├── sherlock.Z
+│       │   │   └── sherlock.zst
+│       │   ├── feature.rs
+│       │   ├── hay.rs
+│       │   ├── json.rs
+│       │   ├── macros.rs
+│       │   ├── misc.rs
+│       │   ├── multiline.rs
+│       │   ├── regression.rs
+│       │   ├── tests.rs
+│       │   └── util.rs
+│       └── UNLICENSE
+├── Templates
+└── Videos
+
+120 directories, 563 files

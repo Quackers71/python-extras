@@ -1,0 +1,10 @@
+./anewone.PHP:3:function onenewfunc() {
+./anewone.PHP:7:function FINALFUNC() {
+./file3.php:3:function nother() {
+./file3.php:7:function finalFunc() {
+./another.php:3:function makeSandwich($bread, $meat, $cheese) {
+./another.php:7:function eatSandwich($sandwich) {
+./file2.php:3:function firstfunction($do, $it, $now) {
+./file2.php:7:Function second() {
+./file2.php:11:function third() {
+./file2.php:15:function listEmails($id) {

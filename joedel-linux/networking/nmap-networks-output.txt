@@ -1,0 +1,32 @@
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-05-27 08:38 GMT
+Nmap scan report for ec2-35-177-35-250.eu-west-2.compute.amazonaws.com (35.177.35.250)
+Host is up (0.032s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+80/tcp  open   http
+443/tcp closed https
+
+Nmap scan report for 192.168.1.1
+Host is up (0.024s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+23/tcp   open  telnet
+53/tcp   open  domain
+80/tcp   open  http
+5000/tcp open  upnp
+8200/tcp open  trivnet1
+
+Nmap scan report for 192.168.1.28
+Host is up (0.0011s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+5900/tcp open  vnc
+
+Nmap scan report for 192.168.1.110
+Host is up (0.020s latency).
+All 1000 scanned ports on 192.168.1.110 are closed
+
+Nmap done: 5 IP addresses (4 hosts up) scanned in 15.70 seconds

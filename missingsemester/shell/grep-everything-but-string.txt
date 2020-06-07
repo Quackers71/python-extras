@@ -1,0 +1,257 @@
+Binary file ./Kylie and Lily.jpg matches
+./script.py:import sys
+./script.py:for arg in reversed(sys.argv[1:]):
+./script.py:    print(arg)
+./script.py:
+Binary file ./ThePebble.png matches
+Binary file ./ThePebble.jpg matches
+./test.sh:
+./.bashrc:# Q Alias commands
+./.bashrc:alias ..="cd .."
+./.bashrc:alias qh="cd /home/robq/"
+./.bashrc:
+./.bashrc:alias gs="git status"
+./.bashrc:alias gpus="git push"
+./.bashrc:alias gpo="git push origin $1"
+./.bashrc:alias ga.="git add ."
+./.bashrc:alias gaa="git add --all"
+./.bashrc:alias gcm="git commit -m $1"
+./.bashrc:alias gcam="git commit -am $1"
+./.bashrc:alias gdf="git diff $1"
+./.bashrc:alias gpul="git pull"
+./.bashrc:alias grh="git reset --hard $1"
+./.bashrc:alias gl="git log --oneline"
+./.bashrc:alias glg='git log --pretty=format:"%h %s" --graph'
+./.bashrc:alias gc="git checkout $1"
+./.bashrc:
+./.bashrc:alias a-g="ansible-galaxy $1"
+./.bashrc:alias a-p="ansible-playbook $1"
+./.bashrc:alias a-v="ansible-vault $1"
+./.bashrc:alias a="ansible"
+./notes.txt:## Shell Tools and Scripting
+./notes.txt:https://missing.csail.mit.edu/2020/shell-tools/
+./notes.txt:
+./notes.txt:
+./notes.txt:{ chmod a+x mcd.sh
+./notes.txt:  source mcd.sh
+./notes.txt:}
+./notes.txt:
+./notes.txt:$ mcd test
+./notes.txt:/shell/test/ $
+./notes.txt:
+./notes.txt:$ true
+./notes.txt:$ echo $?
+./notes.txt:0
+./notes.txt:
+./notes.txt:$ false
+./notes.txt:$ echo $?
+./notes.txt:1
+./notes.txt:
+./notes.txt:$ false || echo "Oops fail"
+./notes.txt:Oops fail
+./notes.txt:
+./notes.txt:$ true || echo "Will not be printed"
+./notes.txt:
+./notes.txt:$ true && echo "Things went well"
+./notes.txt:Things went well
+./notes.txt:
+./notes.txt:$ false && echo "This will not print"
+./notes.txt:
+./notes.txt:$ false; echo "This will always print"
+./notes.txt:This will always print
+./notes.txt:
+./notes.txt:$ foo=$(pwd)
+./notes.txt:$ echo $foo
+./notes.txt:/home/pi/repos/python-extras/shell
+./notes.txt:
+./notes.txt:$ echo "We are in $(pwd)"
+./notes.txt:
+./notes.txt:$ cat <(ls) <(ls ..)
+./notes.txt:# concatenates the list of dir(s) into a temp file
+./notes.txt:
+./notes.txt:# Notes for example.sh
+./notes.txt:
+./notes.txt:$ man test
+./notes.txt:INTEGER1 -ne INTEGER2
+./notes.txt:       INTEGER1 is not equal to INTEGER2
+./notes.txt:
+./notes.txt:$ chmod a+x example.sh
+./notes.txt:$ ./example.sh mcd.sh example.sh 
+./notes.txt:Starting program at Sat 23 May 12:46:35 GMT 2020
+./notes.txt:Running program ./example.sh with 2 arguments with pid 2571
+./notes.txt:File mcd.sh does not have any foobar, adding one
+./notes.txt:
+./notes.txt:convert ThePebble.{png,jpg}
+./notes.txt:
+./notes.txt:$ touch foo{,1,2,10}
+./notes.txt:$ ll
+./notes.txt:total 292
+./notes.txt:-rwxr-xr-x 1 pi pi    478 May 23 12:46 example.sh
+./notes.txt:-rw-r--r-- 1 pi pi      0 May 23 15:48 foo
+./notes.txt:-rw-r--r-- 1 pi pi      0 May 23 15:48 foo1
+./notes.txt:-rw-r--r-- 1 pi pi      0 May 23 15:48 foo10
+./notes.txt:-rw-r--r-- 1 pi pi      0 May 23 15:48 foo2
+./notes.txt:
+./notes.txt:$ tree project*
+./notes.txt:project1
+./notes.txt:└── src
+./notes.txt:project2
+./notes.txt:└── src
+./notes.txt:
+./notes.txt:2 directories, 0 files
+./notes.txt:
+./notes.txt:$ touch project{1,2}/src/test{1,2,3}.py
+./notes.txt:$ tree project*
+./notes.txt:project1
+./notes.txt:└── src
+./notes.txt:    ├── test1.py
+./notes.txt:    ├── test2.py
+./notes.txt:    └── test3.py
+./notes.txt:project2
+./notes.txt:└── src
+./notes.txt:    ├── test1.py
+./notes.txt:    ├── test2.py
+./notes.txt:    └── test3.py
+./notes.txt:
+./notes.txt:2 directories, 6 files
+./notes.txt:$ touch {foo,bar}/{a..j}
+./notes.txt:
+./notes.txt:$ tree foo bar
+./notes.txt:foo
+./notes.txt:├── a
+./notes.txt:├── b
+./notes.txt:etc...
+./notes.txt:
+./notes.txt:bar
+./notes.txt:├── a
+./notes.txt:├── b
+./notes.txt:etc...
+./notes.txt:
+./notes.txt:$ touch foo/x bar/y
+./notes.txt:$ diff <(ls foo) <(ls bar)
+./notes.txt:11c11
+./notes.txt:< x
+./notes.txt:---
+./notes.txt:> y
+./notes.txt:
+./notes.txt:$ ./script.py a b c
+./notes.txt:bash: ./script.py: /usr/local/bin/python: bad interpreter: No such file or directory
+./notes.txt:
+./notes.txt:
+./notes.txt:$ shellcheck mcd.sh 
+./notes.txt:
+./notes.txt:In mcd.sh line 1:
+./notes.txt:mcd () {
+./notes.txt:^-- SC2148: Tips depend on target shell and yours is unknown. Add a shebang.
+./notes.txt:
+./notes.txt:
+./notes.txt:In mcd.sh line 3:
+./notes.txt:    cd "$1"
+./notes.txt:    ^-- SC2164: Use cd ... || exit in case cd fails.
+./notes.txt:
+./notes.txt:$ man rg # ripgrep(rg)
+./notes.txt:$ sudo apt-get install -y cargo
+./notes.txt:# Requires further work to get rg working!
+./notes.txt:
+./notes.txt:$ tldr convert # similar to man but with Examples
+./notes.txt:Imagemagick image conversion tool:
+./notes.txt:More information: <https://imagemagick.org/script/convert.php>.
+./notes.txt:
+./notes.txt:# To install tldr
+./notes.txt:$ sudo apt-get install -y nodejs npm
+./notes.txt:$ sudo npm install -g tldr
+./notes.txt:
+./notes.txt:$ tldr --update
+./notes.txt:# Took too long
+./notes.txt:$ tldt tar
+./notes.txt:✔ Page not found. Updating cache...
+./notes.txt:✔ Creating index...
+./notes.txt:
+./notes.txt:  tar
+./notes.txt:
+./notes.txt:  Archiving utility.
+./notes.txt:  Often combined with a compression method, such as gzip or bzip.
+./notes.txt:  More information: https://www.gnu.org/software/tar.
+./notes.txt:
+./notes.txt:  - Create an archive from files:
+./notes.txt:    tar cf target.tar file1 file2 file3
+./notes.txt:
+./notes.txt:  - Create a gzipped archive:
+./notes.txt:    tar czf target.tar.gz file1 file2 file3
+./notes.txt:
+./notes.txt:  - Create a gzipped archive from a directory using relative paths:
+./notes.txt:    tar czf target.tar.gz -C path/to/directory .
+./notes.txt:
+./notes.txt:  - Extract a (compressed) archive into the current directory:
+./notes.txt:    tar xf source.tar[.gz|.bz2|.xz]
+./notes.txt:
+./notes.txt:  - Extract an archive into a target directory:
+./notes.txt:    tar xf source.tar -C directory
+./notes.txt:
+./notes.txt:  - Create a compressed archive, using archive suffix to determine the compression program:
+./notes.txt:    tar caf target.tar.xz file1 file2 file3
+./notes.txt:
+./notes.txt:  - List the contents of a tar file:
+./notes.txt:    tar tvf source.tar
+./notes.txt:
+./notes.txt:  - Extract files matching a pattern:
+./notes.txt:    tar xf source.tar --wildcards "*.html"
+./notes.txt:
+./notes.txt:  - Extract a specific file without preserving the folder structure:
+./notes.txt:    tar xf source.tar source.tar/path/to/extract --strip-components=depth_to_strip
+./notes.txt:
+./notes.txt:
+./notes.txt:$ find . -path '**/test/*.py' -type f
+./notes.txt:./project1/src/test/test3.py
+./notes.txt:./project1/src/test/test1.py
+./notes.txt:./project1/src/test/test2.py
+./notes.txt:./project2/src/test/test3.py
+./notes.txt:./project2/src/test/test1.py
+./notes.txt:./project2/src/test/test2.py
+./notes.txt:
+./notes.txt: . -name "*.tmp"
+./notes.txt:./project1/src/test/test3.tmp
+./notes.txt:./project1/src/test/test2.tmp
+./notes.txt:./project1/src/test/test1.tmp
+./notes.txt:./project2/src/test/test3.tmp
+./notes.txt:./project2/src/test/test2.tmp
+./notes.txt:./project2/src/test/test1.tmp
+./notes.txt:
+./notes.txt:$ find . -name "*.tmp" -exec rm {} \;
+./notes.txt:
+./notes.txt:$ sudo apt-get install locate -y
+./notes.txt:$ locate project*
+./notes.txt:$ sudo updatedb
+./notes.txt:
+./notes.txt:
+./notes.txt:$ grep foobar -R .
+./notes.txt:Binary file ./.notes.txt.swp matches
+./notes.txt:./notes.txt:File mcd.sh does not have any foobar, adding one
+./notes.txt:./mcd.sh:# foobar
+./notes.txt:./example.sh:    grep foobar "$file" > /dev/null 2> /dev/null
+./notes.txt:./example.sh:	echo "File $file does not have any foobar, adding one"
+./notes.txt:./example.sh:	echo "# foobar" >> "$file"
+./notes.txt:
+./notes.txt: 
+./mcd.sh:
+./mcd.sh:mcd () {
+./mcd.sh:    mkdir -p "$1"
+./mcd.sh:    cd "$1" || exit
+./mcd.sh:}
+./mcd.sh:# foobar
+./example.sh:
+./example.sh:echo "Starting program at $(date)" # Date will be substituted
+./example.sh:
+./example.sh:echo "Running program $0 with $# arguments with pid $$"
+./example.sh:
+./example.sh:for file in "$@"; do
+./example.sh:    grep foobar "$file" > /dev/null 2> /dev/null
+./example.sh:    # when pattern is not found, grep has exit status
+./example.sh:    # We redirect STDOUT and STDERR to a null register since
+./example.sh:    # we do not care about them!
+./example.sh:
+./example.sh:    if [[ "$?" -ne 0 ]]; then
+./example.sh:	echo "File $file does not have any foobar, adding one"
+./example.sh:	echo "# foobar" >> "$file"
+./example.sh:    fi
+./example.sh:done

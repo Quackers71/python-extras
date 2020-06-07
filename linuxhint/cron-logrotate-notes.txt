@@ -1,0 +1,94 @@
+## crontab && logrotate notes
+# https://crontab.guru/examples.html
+
+# some helpful links
+# https://stackoverflow.com/questions/52041656/log-rotate-delete-original-file-after-compressing
+# https://stackoverflow.com/questions/1034243/how-to-get-a-unix-script-to-run-every-15-seconds
+# https://linux.die.net/man/8/logrotate
+# https://stackoverflow.com/questions/20162176/centos-linux-setting-logrotate-to-maximum-file-size-for-all-logs
+
+
+pi@raspberrypi:~/repos/python-extras/linuxhint $ sudo cat /etc/logrotate.d/custom-tree
+/home/pi/tree.txt {
+    daily
+    rotate 14
+    maxsize 600M
+    compress
+    notifempty
+    create
+    postrotate
+        rm -f ~/tree.txt
+    endscript
+}
+
+pi@raspberrypi:~/repos/python-extras/linuxhint $ crontab -l
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+# every minute
+*/1 * * * *  /home/pi/repos/python-extras/linuxhint/./tree-cron2.sh
+
+# every 15 minutes
+*/15 * * * * sudo logrotate /etc/logrotate.d/custom-tree
+
+# every 30 minutes
+*/30 * * * * cat ~/tree-template2.txt >> ~/tree.txt
+pi@raspberrypi:~/repos/python-extras/linuxhint $ sudo cat /etc/logrotate.d/custom-tree
+/home/pi/tree.txt {
+    daily
+    rotate 14
+    maxsize 1G
+    compress
+    notifempty
+    create
+    postrotate
+        rm -f ~/tree.txt
+    endscript
+}
+pi@raspberrypi:~/repos/python-extras/linuxhint $ cat tree-cron2.sh 
+#!/bin/bash
+
+fileName="tree.txt"
+
+cd ~/
+if [[ -f "$fileName" ]]
+then
+        echo `tree` >> $fileName
+        echo `df -h /` >> $fileName
+        echo `date` >> $fileName
+        echo `ls -lah ~/$fileName` >> $fileName 
+else
+        touch $fileName
+        cp ~/tree-template.txt ~/$fileName
+fi
+pi@raspberrypi:~/repos/python-extras/linuxhint $ ll -lah ~/tree*
+-rw-r--r-- 1 pi pi 305M Jun  7 16:42 /home/pi/tree-template2.txt
+-rw-r--r-- 1 pi pi 153M Jun  6 19:22 /home/pi/tree-template.txt
+-rw-r--r-- 1 pi pi  69K Jun  7 16:47 /home/pi/tree.txt
+-rw-r--r-- 1 pi pi 1.1G Jun  7 16:45 /home/pi/tree.txt.1
+-rw-r--r-- 1 pi pi  62M Jun  7 16:48 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi pi 128M Jun  7 16:15 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi pi 128M Jun  7 15:44 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi pi 164M Jun  7 15:00 /home/pi/tree.txt.4.gz
+-rw-r--r-- 1 pi pi  57M May 30 09:21 /home/pi/tree-zip.txt
+

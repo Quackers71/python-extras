@@ -1,0 +1,299 @@
+##Bash Scripting
+# from https://youtu.be/e7BufAVwDiM
+
+# covering the following topics:
+
+1-Hello Bash Scripting
+2-Redirect to file
+3-Comments
+4-Conditional Statements
+5-Loops
+6-Script input
+7-Script output
+8-how to send output from one script to another scrpt
+9-String Processing
+10-Numbers and Arithmetic
+11-Declare Command
+12-Arrays
+13-Functions
+14-Files and Directories
+15-Send Email Via Script
+16-Curl in Scripts
+17-Professional Menus
+18-Wait for filesystem events with inotify
+19-Introduction to grep
+20-Introduction to awk
+21-Introduction to sed
+22- Debugging bash scripts
+
+
+$ cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+
+
+## crontab && logrotate stuff
+# https://crontab.guru/examples.html
+
+# crontab -e
+*/1 * * * *  /home/pi/repos/python-extras/linuxhint/./tree-cron.sh
+0 1 * * * sudo logrotate /etc/logrotate.d/custom-tree
+30 1 * * * cp ~/tree-zip.txt ~/tree.txt
+
+30 7 * * * sudo logrotate /etc/logrotate.d/custom-tree
+0 8 * * * cp ~/tree-template.txt ~/tree.txt
+
+
+# sudo crontab -e
+# m h  dom mon dow   command
+
+0 7 * * 1 sudo apt-get update -y >/del/null 2>&1
+
+
+
+# My first bash script
+$ cat tree-cron.sh 
+#!/bin/bash
+
+cd ~/
+echo `tree` >> tree.txt
+echo `df -h /` >> tree.txt
+echo `date` >> tree.txt
+echo `ls -lah ~/tree.txt` >> tree.txt
+
+
+# For case.sh run:
+$ ./case.sh BMW
+BMW
+It's a BMW
+
+# logrotate ;-)
+https://www.thegeekstuff.com/2010/07/logrotate-examples/
+
+# Add your file in /etc/logrotate.d/
+$ cat custom-tree
+/home/pi/tree-zip.txt {
+maxsize 50M
+daily
+rotate 4
+compress
+notifempty
+create
+}
+
+# from 03/06/2020 my logrotate file has been changed to:
+$ cat /etc/logrotate.d/custom-tree
+/home/pi/tree.txt {
+    daily
+    rotate 7
+    maxsize 100M
+    compress
+    notifempty
+    create
+}
+# *** Check out crontab -e above
+
+
+
+# You can manually run the logrotate using:
+$ sudo logrotate -f /etc/logrotate.conf
+
+# from https://www.networkworld.com/article/3218728/how-log-rotation-works-with-logrotate.html
+
+# The important files to pay attention to are:
+
+* /usr/sbin/logrotate -- the logrotate command itself (the executable)
+* /etc/cron.daily/logrotate -- the shell script that runs logrotate on a daily basis (note that it might be /etc/cron.daily/logrotate.cron on some systems)
+* /etc/logrotate.conf -- the log rotation configuration file
+
+## Added this to the file:
+# use date as a suffix of the rotated file
+#dateext
+
+
+# Another important file is /etc/logrotate.d, included in the process through this line in the /etc/logrotate.conf file:
+
+include /etc/logrotate.d
+
+# more cron stuff related to logrotate:
+pi@raspberrypi:/etc/logrotate.d $ ll /etc/cron*
+-rw-r--r-- 1 root root  722 May 19  2015 /etc/crontab
+
+/etc/cron.d:
+total 4
+-rw-r--r-- 1 root root 712 Jan  1  2017 php
+
+/etc/cron.daily:
+total 36
+-rwxr-xr-x 1 root root  539 Jun 16  2019 apache2
+-rwxr-xr-x 1 root root 1474 Sep 13  2017 apt-compat
+-rwxr-xr-x 1 root root  314 Apr 18  2017 aptitude
+-rwxr-xr-x 1 root root  355 Oct 25  2016 bsdmainutils
+-rwxr-xr-x 1 root root 1597 Feb 22  2017 dpkg
+-rwxr-xr-x 1 root root 2211 Apr 13  2014 locate
+-rwxr-xr-x 1 root root   89 May  5  2015 logrotate
+-rwxr-xr-x 1 root root 1065 Dec 13  2016 man-db
+-rwxr-xr-x 1 root root  249 May 17  2017 passwd
+
+/etc/cron.hourly:
+total 4
+-rwxr-xr-x 1 root root 191 Feb 22  2012 fake-hwclock
+
+/etc/cron.monthly:
+total 0
+
+/etc/cron.weekly:
+total 4
+-rwxr-xr-x 1 root root 723 Dec 13  2016 man-db
+pi@raspberrypi:/etc/logrotate.d $ ll /etc/cron*/*
+-rwxr-xr-x 1 root root  539 Jun 16  2019 /etc/cron.daily/apache2
+-rwxr-xr-x 1 root root 1474 Sep 13  2017 /etc/cron.daily/apt-compat
+-rwxr-xr-x 1 root root  314 Apr 18  2017 /etc/cron.daily/aptitude
+-rwxr-xr-x 1 root root  355 Oct 25  2016 /etc/cron.daily/bsdmainutils
+-rwxr-xr-x 1 root root 1597 Feb 22  2017 /etc/cron.daily/dpkg
+-rwxr-xr-x 1 root root 2211 Apr 13  2014 /etc/cron.daily/locate
+-rwxr-xr-x 1 root root   89 May  5  2015 /etc/cron.daily/logrotate
+-rwxr-xr-x 1 root root 1065 Dec 13  2016 /etc/cron.daily/man-db
+-rwxr-xr-x 1 root root  249 May 17  2017 /etc/cron.daily/passwd
+-rw-r--r-- 1 root root  712 Jan  1  2017 /etc/cron.d/php
+-rwxr-xr-x 1 root root  191 Feb 22  2012 /etc/cron.hourly/fake-hwclock
+-rwxr-xr-x 1 root root  723 Dec 13  2016 /etc/cron.weekly/man-db
+
+# Latest Output of logrotated Files
+
+# Output 01/06/2020
+
+$ ll -lah ~/tree.txt*
+-rw-r--r-- 1 pi   pi    27M Jun  1 19:59 /home/pi/tree.txt
+-rw-r--r-- 1 pi   pi    17M Jun  1 06:26 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi   pi    16M May 31 06:26 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi   pi   7.3M May 30 06:25 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi   pi   5.0M May 29 19:57 /home/pi/tree.txt.4.gz
+
+# Output 02/06/2020
+
+$ ll -lah ~/tree.txt*
+-rw-r--r-- 1 pi   pi   100M Jun  2 20:14 /home/pi/tree.txt
+-rw-r--r-- 1 pi   pi   6.0M Jun  2 06:26 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi   pi    17M Jun  1 06:26 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi   pi    16M May 31 06:26 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi   pi   7.3M May 30 06:25 /home/pi/tree.txt.4.gz
+
+# Output 03/06/2020
+
+$ ll -lah ~/tree.txt*
+-rw-r--r-- 1 pi pi  23M Jun  3 18:00 /home/pi/tree.txt
+-rw-r--r-- 1 pi pi  15M Jun  3 06:26 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi pi 6.0M Jun  2 06:26 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi pi  17M Jun  1 06:26 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi pi  16M May 31 06:26 /home/pi/tree.txt.4.gz
+
+# Output 04/06/2020 *** Unchanged due to tree.txt being < 100M as per custom-tree file
+
+$ ll -lah ~/tree.txt*
+-rw-r--r-- 1 pi pi  75M Jun  4 20:22 /home/pi/tree.txt
+-rw-r--r-- 1 pi pi  15M Jun  3 06:26 /home/pi/tree.txt.1.gz
+-rw-r--r-- 1 pi pi 6.0M Jun  2 06:26 /home/pi/tree.txt.2.gz
+-rw-r--r-- 1 pi pi  17M Jun  1 06:26 /home/pi/tree.txt.3.gz
+-rw-r--r-- 1 pi pi  16M May 31 06:26 /home/pi/tree.txt.4.gz
+
+
+## STDIN
+# Script input - specifically read text from a file using stdin
+$ ./script-input2.sh doc1.txt
+1-Hello Bash Scripting
+2-Redirect to file
+3-Comments
+4-Conditional Statements
+5-Loops
+6-Script input
+7-Script output
+8-how to send output from one script to another scrpt
+9-String Processing
+10-Numbers and Arithmetic
+11-Declare Command
+12-Arrays
+13-Functions
+14-Files and Directories
+15-Send Email Via Script
+16-Curl in Scripts
+17-Professional Menus
+18-Wait for filesystem events with inotify
+19-Introduction to grep
+20-Introduction to awk
+21-Introduction to sed
+22- Debugging bash scripts
+
+## Script output - STDOUT STDERR
+# all outputs and code in:
+$ ./script-output.sh
+# including file1.txt & file2.txt
+
+## Pipes - send output from one script to another
+
+# exported MESSAGE variable to another script & echo'd the variable i.e.
+# ran:
+$ ./pipes-send.sh
+The message from pipes-send script is : Hello Linux Peeple # output
+
+## Numbers & Arithmetic
+# Adding numbers - output - expressions & Hex
+
+## Declare Command
+$ declare testvar=49
+$ declare -p # will show all declared variables
+# in a bash script use:
+declare -r pwdfile=/etc/passwd
+# this will make the variable readonly
+
+## Sending email via Script
+# install ssmtp 
+$ sudo apt install ssmtp -y
+
+# edit ssmtp.conf:
+$ sudo vim /etc/ssmtp/ssmtp.conf
+root=iburger71@gmail.com
+mailhub=smtp.gmail.com:587
+AuthUser=iburger71@gmail.com
+AuthPass=********
+UseSTARTTLS=yes
+hostname=raspberrypi
+
+$ ./sendEmail-script.sh 
+To: iburger71@gmail.com
+From: iburger71@gmail.com
+Cc: iburger71@gmail.com
+Subject: Ras-Pi TEST
+TEST Yo
+
+## curl in a script file
+# using a test file from http://www.ovh.net/files/
+
+$ ./curl-script.sh 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1024k  100 1024k    0     0  1174k      0 --:--:-- --:--:-- --:--:-- 1175k
+pi@raspberrypi:~/repos/python-extras/linuxhint$ ll
+total 1200
+-rw-r--r-- 1 pi pi 1048576 Jun  2 19:37 1Mio.dat
+
+# Header Information
+$ ./curl-script.sh 
+HTTP/1.1 200 OK
+Date: Tue, 02 Jun 2020 19:43:54 GMT
+Server: Apache
+Last-Modified: Thu, 16 Sep 2010 11:42:20 GMT
+ETag: "362c002-100000-4905ef050df00"
+Accept-Ranges: bytes
+Content-Length: 1048576
+Connection: close
+Content-Type: application/octet-stream
+
+
+## inotify-tools
+
+$ sudo apt install inotify-tools
+

@@ -1,0 +1,11 @@
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:5900            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:36656         127.0.0.1:42743         ESTABLISHED
+tcp        0      0 192.168.1.28:5900       192.168.1.90:54723      ESTABLISHED
+tcp        0      0 127.0.0.1:42743         127.0.0.1:36656         ESTABLISHED
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+tcp6       0      0 :::5900                 :::*                    LISTEN     
+tcp6       0      0 :::80                   :::*                    LISTEN     

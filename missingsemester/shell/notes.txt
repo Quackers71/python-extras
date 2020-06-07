@@ -1,0 +1,209 @@
+## Shell Tools and Scripting
+https://missing.csail.mit.edu/2020/shell-tools/
+
+#!/bin/bash
+
+{ chmod a+x mcd.sh
+  source mcd.sh
+}
+
+$ mcd test
+/shell/test/ $
+
+$ true
+$ echo $?
+0
+
+$ false
+$ echo $?
+1
+
+$ false || echo "Oops fail"
+Oops fail
+
+$ true || echo "Will not be printed"
+
+$ true && echo "Things went well"
+Things went well
+
+$ false && echo "This will not print"
+
+$ false; echo "This will always print"
+This will always print
+
+$ foo=$(pwd)
+$ echo $foo
+/home/pi/repos/python-extras/shell
+
+$ echo "We are in $(pwd)"
+
+$ cat <(ls) <(ls ..)
+# concatenates the list of dir(s) into a temp file
+
+# Notes for example.sh
+
+$ man test
+INTEGER1 -ne INTEGER2
+       INTEGER1 is not equal to INTEGER2
+
+$ chmod a+x example.sh
+$ ./example.sh mcd.sh example.sh 
+Starting program at Sat 23 May 12:46:35 GMT 2020
+Running program ./example.sh with 2 arguments with pid 2571
+File mcd.sh does not have any foobar, adding one
+
+convert ThePebble.{png,jpg}
+
+$ touch foo{,1,2,10}
+$ ll
+total 292
+-rwxr-xr-x 1 pi pi    478 May 23 12:46 example.sh
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo1
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo10
+-rw-r--r-- 1 pi pi      0 May 23 15:48 foo2
+
+$ tree project*
+project1
+└── src
+project2
+└── src
+
+2 directories, 0 files
+
+$ touch project{1,2}/src/test{1,2,3}.py
+$ tree project*
+project1
+└── src
+    ├── test1.py
+    ├── test2.py
+    └── test3.py
+project2
+└── src
+    ├── test1.py
+    ├── test2.py
+    └── test3.py
+
+2 directories, 6 files
+$ touch {foo,bar}/{a..j}
+
+$ tree foo bar
+foo
+├── a
+├── b
+etc...
+
+bar
+├── a
+├── b
+etc...
+
+$ touch foo/x bar/y
+$ diff <(ls foo) <(ls bar)
+11c11
+< x
+---
+> y
+
+$ ./script.py a b c
+bash: ./script.py: /usr/local/bin/python: bad interpreter: No such file or directory
+
+
+$ shellcheck mcd.sh 
+
+In mcd.sh line 1:
+mcd () {
+^-- SC2148: Tips depend on target shell and yours is unknown. Add a shebang.
+
+
+In mcd.sh line 3:
+    cd "$1"
+    ^-- SC2164: Use cd ... || exit in case cd fails.
+
+$ man rg # ripgrep(rg)
+$ sudo apt-get install -y cargo
+# Requires further work to get rg working!
+
+$ tldr convert # similar to man but with Examples
+Imagemagick image conversion tool:
+More information: <https://imagemagick.org/script/convert.php>.
+
+# To install tldr
+$ sudo apt-get install -y nodejs npm
+$ sudo npm install -g tldr
+
+$ tldr --update
+# Took too long
+$ tldt tar
+✔ Page not found. Updating cache...
+✔ Creating index...
+
+  tar
+
+  Archiving utility.
+  Often combined with a compression method, such as gzip or bzip.
+  More information: https://www.gnu.org/software/tar.
+
+  - Create an archive from files:
+    tar cf target.tar file1 file2 file3
+
+  - Create a gzipped archive:
+    tar czf target.tar.gz file1 file2 file3
+
+  - Create a gzipped archive from a directory using relative paths:
+    tar czf target.tar.gz -C path/to/directory .
+
+  - Extract a (compressed) archive into the current directory:
+    tar xf source.tar[.gz|.bz2|.xz]
+
+  - Extract an archive into a target directory:
+    tar xf source.tar -C directory
+
+  - Create a compressed archive, using archive suffix to determine the compression program:
+    tar caf target.tar.xz file1 file2 file3
+
+  - List the contents of a tar file:
+    tar tvf source.tar
+
+  - Extract files matching a pattern:
+    tar xf source.tar --wildcards "*.html"
+
+  - Extract a specific file without preserving the folder structure:
+    tar xf source.tar source.tar/path/to/extract --strip-components=depth_to_strip
+
+
+$ find . -path '**/test/*.py' -type f
+./project1/src/test/test3.py
+./project1/src/test/test1.py
+./project1/src/test/test2.py
+./project2/src/test/test3.py
+./project2/src/test/test1.py
+./project2/src/test/test2.py
+
+ . -name "*.tmp"
+./project1/src/test/test3.tmp
+./project1/src/test/test2.tmp
+./project1/src/test/test1.tmp
+./project2/src/test/test3.tmp
+./project2/src/test/test2.tmp
+./project2/src/test/test1.tmp
+
+$ find . -name "*.tmp" -exec rm {} \;
+
+$ sudo apt-get install locate -y
+$ locate project*
+$ sudo updatedb
+
+
+$ grep foobar -R .
+Binary file ./.notes.txt.swp matches
+./notes.txt:File mcd.sh does not have any foobar, adding one
+./mcd.sh:# foobar
+./example.sh:    grep foobar "$file" > /dev/null 2> /dev/null
+./example.sh:	echo "File $file does not have any foobar, adding one"
+./example.sh:	echo "# foobar" >> "$file"
+
+$ grep "#!" -R --invert-match . > grep-everything-but-string.txt
+$ grep "#!" -R . > grep-string.txt
+
+
