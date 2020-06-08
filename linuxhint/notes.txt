@@ -310,4 +310,10 @@ $ sudo apt install inotify-tools
 - 1. scan a file by line
 - 2. split each input line into different fields - i.e. $1, $2, $3 & so on.
 - 3. Performs actions on masked lines
+# more research required for awk
+
+
+## Intro to sed
+# Stream Editor
+
 

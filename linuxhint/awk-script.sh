@@ -9,12 +9,12 @@ then
         test=$( echo -e `grep -i -c $grepVar $fileName`)
         if [ $test != 0 ]
         then
-                echo -e `$grepVar | awk -F ' ' '{print NF}' $fileName`
+                awk '/$grepVar/ {print NF}' $fileName | tail -n 1
 #                read -p "Please enter the column(s) you'd like to display: " awkVar
 #                case $awkVar in
                 
-#                DATA=$( echo -e `grep -i -c $grepVar $fileName` )
-#                echo "There are $DATA matching item's of \"$grepVar\""
+                DATA=$( echo -e `grep -i -c $grepVar $fileName` )
+                echo "There are $DATA matching item's of \"$grepVar\""
 #                grep -i -n $grepVar $fileName
         else
                 echo "Unfortunately the item \"$grepVar\", doesn't exist!"
