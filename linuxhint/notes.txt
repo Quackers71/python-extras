@@ -37,6 +37,7 @@ $ cat /etc/shells
 
 ## crontab && logrotate stuff
 # https://crontab.guru/examples.html
+# https://cronitor.io/cron-job-monitoring?utm_source=crontabguru&utm_campaign=cronitor
 
 # crontab -e
 */1 * * * *  /home/pi/repos/python-extras/linuxhint/./tree-cron.sh
@@ -297,3 +298,51 @@ Content-Type: application/octet-stream
 
 $ sudo apt install inotify-tools
 
+
+## using grep
+# see grep-script.sh
+# helpful link: https://stackoverflow.com/questions/15462575/concatenate-grep-output-string-bash-script
+
+
+## using awk
+# awk is a program used processing text and extracting data
+# awk scripting
+- 1. scan a file by line
+- 2. split each input line into different fields - i.e. $1, $2, $3 & so on.
+- 3. Performs actions on masked lines
+# more research required for awk
+
+
+## Intro to sed
+# Stream Editor
+
+## Debug bash scripts
+
+$ bash -x ./awk-script.sh
++ read -p 'Enter the Filename to search text from: ' fileName
+Enter the Filename to search text from: fileawk.txt
++ [[ -f fileawk.txt ]]
++ read -p 'Enter the text to search: ' grepVar
+Enter the text to search: is
++++ grep -i -c is fileawk.txt
+++ echo -e 45
++ test=45
++ '[' 45 '!=' 0 ']'
++ awk '/$grepVar/ {print NF}' fileawk.txt
++ tail -n 1
++++ grep -i -c is fileawk.txt
+++ echo -e 45
++ DATA=45
++ echo 'There are 45 matching item'\''s of "is"'
+There are 45 matching item's of "is"
+
+# or place -x after #! i.e.
+#!/bin/bash -x
+
+or place set -x && set +x i.e.
+
+set -x
+
+read -p "Enter the Filename to search text from: " fileName
+
+set +x
