@@ -298,3 +298,16 @@ Content-Type: application/octet-stream
 
 $ sudo apt install inotify-tools
 
+
+## using grep
+# see grep-script.sh
+# helpful link: https://stackoverflow.com/questions/15462575/concatenate-grep-output-string-bash-script
+
+
+## using awk
+# awk is a program used processing text and extracting data
+# awk scripting
+- 1. scan a file by line
+- 2. split each input line into different fields - i.e. $1, $2, $3 & so on.
+- 3. Performs actions on masked lines
+
