@@ -37,6 +37,7 @@ $ cat /etc/shells
 
 ## crontab && logrotate stuff
 # https://crontab.guru/examples.html
+# https://cronitor.io/cron-job-monitoring?utm_source=crontabguru&utm_campaign=cronitor
 
 # crontab -e
 */1 * * * *  /home/pi/repos/python-extras/linuxhint/./tree-cron.sh
