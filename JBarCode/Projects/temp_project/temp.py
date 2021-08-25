@@ -1,17 +1,10 @@
-my_list = [0, 1, 2, 3]
-print(my_list)
-print(f'removed {my_list.pop()}')
-print(my_list)
+name = 'The Pebble aka Quackers'
+names = name.split(' ')
+print(name)
+print(names)
 
-x = 4
-print(x)
+new_name = ' '.join(names)
+print(new_name)
 
-y = 20 - x
-print(y)
-
-a = 5 * 1000
-a = a - 50
-print(a)
-
-a += a
-print(a)
+alt_new_name = '|'.join(names)
+print(alt_new_name)
